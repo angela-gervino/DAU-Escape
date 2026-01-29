@@ -5,15 +5,22 @@ namespace DAUEscape
 {
     public class PlayerController : MonoBehaviour
     {
-        const float acceleration = 20.0f;
-        const float deceleration = 135.0f;
+        // let enemy classes get access to player class through static variables
+        public static PlayerController Instance
+        {
+            get
+            {
+                return s_Instance;
+            }
+        }
 
         public float maxForwardSpeed = 8.0f;
         public float rotationSpeed;
         public int maxRotationSpeed = 1200;
         public int minRotationSpeed = 800;
-        //public float gravity = 20.0f;
 
+        // s_ denotes static variables
+        private static PlayerController s_Instance;
         private PlayerInput playerInput;
         private CharacterController chController;
         private Animator animator;
@@ -23,9 +30,11 @@ namespace DAUEscape
 
         private float desiredForwardSpeed;
         private float forwardSpeed;
-        //private float verticalSpeed;
 
         private readonly int hashForwardSpeed = Animator.StringToHash("ForwardSpeed");
+
+        const float acceleration = 20.0f;
+        const float deceleration = 135.0f;
 
         private void Awake()
         {
@@ -33,6 +42,8 @@ namespace DAUEscape
             playerInput = GetComponent<PlayerInput>();
             animator = GetComponent<Animator>();
             cameraController = Camera.main.GetComponent<CameraController>();
+
+            s_Instance = this;
         }
 
         void FixedUpdate()
