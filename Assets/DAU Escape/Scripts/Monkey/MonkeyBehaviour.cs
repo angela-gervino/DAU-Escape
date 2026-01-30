@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Analytics;
 
 namespace DAUEscape
 {
@@ -9,7 +10,7 @@ namespace DAUEscape
 
         private void Start()
         {
-            Debug.Log(PlayerController.Instance.maxForwardSpeed);
+
         }
 
         private void Update()
@@ -34,7 +35,7 @@ namespace DAUEscape
                 // (monkey only sees forward and to its sides, not behind)
                 if (Vector3.Dot(toPlayer.normalized, transform.forward) > Mathf.Cos(detectionAngle * 0.5f * Mathf.Deg2Rad))
                 {
-                    Debug.Log("Player detected");
+                    ;
                 }
             }
 

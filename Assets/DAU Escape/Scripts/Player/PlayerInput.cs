@@ -14,11 +14,13 @@ namespace DAUEscape
             }
         }
 
+        // whether player is moving forward or backward, doesn't include rotation
         public bool IsMoving
         {
             get
             {
-                return !Mathf.Approximately(moveInput.magnitude, 0);
+                // return !Mathf.Approximately(moveInput.magnitude, 0);
+                return !Mathf.Approximately(moveInput.z, 0);
             }
         }
 
