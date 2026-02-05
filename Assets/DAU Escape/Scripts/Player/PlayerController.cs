@@ -100,66 +100,6 @@ namespace DAUEscape
             }
         }
 
-        /*
-        void FixedUpdate()
-        {
-            ComputeForwardMovement();
-            ComputeRotation();
-
-            if (playerInput.IsMoving)
-            {
-                float rotationSpeed = Mathf.Lerp(maxRotationSpeed, minRotationSpeed, forwardSpeed / desiredForwardSpeed);
-                qTargetRotation = Quaternion.RotateTowards(
-                    transform.rotation,
-                    qTargetRotation,
-                    rotationSpeed * Time.fixedDeltaTime);
-                transform.rotation = qTargetRotation;
-            }
-            chController.Move(playerInput.moveInput.normalized * Time.fixedDeltaTime * 10);
-        }
-
-        private void ComputeForwardMovement()
-        {
-            Vector3 moveInput = playerInput.moveInput.normalized;
-            desiredForwardSpeed = moveInput.magnitude * maxForwardSpeed;
-
-            float accel = playerInput.IsMoving ? acceleration : deceleration;
-
-            forwardSpeed = Mathf.MoveTowards(
-                forwardSpeed,
-                desiredForwardSpeed,
-                Time.fixedDeltaTime * accel);
-
-            animator.SetFloat(hashForwardSpeed, forwardSpeed);
-        }
-
-        private void ComputeRotation()
-        {
-            Vector3 moveInput = playerInput.moveInput.normalized;
-
-            // direction of camera
-            // multiplying by vector3.forward turns quaternion into vector3
-            Vector3 cameraDirection = Quaternion.Euler(
-                0,
-                cameraController.PlayerCam.m_XAxis.Value,
-                0) * Vector3.forward;
-
-            Quaternion targetRotation;
-
-            if (Mathf.Approximately(Vector3.Dot(moveInput, Vector3.forward), -1.0f)) // dot product of -1 means going backwards
-            {
-                targetRotation = Quaternion.LookRotation(-cameraDirection);
-            }
-            else
-            {
-                Quaternion movementRotation = Quaternion.FromToRotation(Vector3.forward, moveInput);
-                targetRotation = Quaternion.LookRotation(movementRotation * cameraDirection);
-            }
-
-            qTargetRotation = targetRotation;
-
-        }*/
-
     }
 }
 

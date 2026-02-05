@@ -1,48 +1,80 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Analytics;
 
 namespace DAUEscape
 {
     public class MonkeyBehaviour : MonoBehaviour
     {
-        public float detectionRadius = 10.0f;
-        public float detectionAngle = 90.0f;
+        public PlayerScanner playerScanner;
+        public float timeToStopPursuit = 2.0f; // if target out of detection range for this many seconds, stop pursuit
+        public float waitUntilMove = 2.0f; // when pursuit stops, how many seconds should NavMesh agent wait before moving again
 
-        private void Start()
+        private PlayerController m_Target;
+        private EnemyController enemyController;
+        private Animator animator;
+        private float timeSinceLostTarget = 0;
+        private Vector3 originPosition;
+
+        private readonly int hashInPursuit = Animator.StringToHash("InPursuit"); // bool: is monkey currently chasing the player?
+        private readonly int hashNearBase = Animator.StringToHash("NearBase"); // bool: is monkey close to its original position? 
+
+        private void Awake()
         {
-
+            playerScanner = new PlayerScanner();
+            enemyController = GetComponent<EnemyController>();
+            animator = GetComponent<Animator>();
+            originPosition = transform.position;
         }
 
         private void Update()
         {
-            LookForPlayer();
-        }
+            var target = playerScanner.Detect(transform);
 
-        private PlayerController LookForPlayer()
-        {
-            if (PlayerController.Instance == null)
-                return null;
-
-            Vector3 enemyPosition = transform.position;
-            Vector3 toPlayer = PlayerController.Instance.transform.position - enemyPosition;
-            toPlayer.y = 0;
-
-            // magnitude of toPlayer is the distance between player and enemy
-            // P - E results in a vector indicating "how to move to get from E to P"
-            if (toPlayer.magnitude <= detectionRadius)
+            if (m_Target == null)
             {
-                // check if player is within the circle sector of the detection range
-                // (monkey only sees forward and to its sides, not behind)
-                if (Vector3.Dot(toPlayer.normalized, transform.forward) > Mathf.Cos(detectionAngle * 0.5f * Mathf.Deg2Rad))
+                if (target != null) // just detected target
                 {
-                    ;
+                    m_Target = target;
                 }
             }
+            else
+            {
+                enemyController.SetFollowTarget(m_Target.transform.position);
+                animator.SetBool(hashInPursuit, true);
 
-            return null;
+                if (target == null) // not in detection range
+                {
+                    timeSinceLostTarget += Time.deltaTime;
+
+                    if (timeSinceLostTarget >= timeToStopPursuit)
+                    {
+                        m_Target = null;
+                        animator.SetBool(hashInPursuit, false);
+                        StartCoroutine(WaitOnPursuit());
+                    }
+                }
+                else // target is in range so have not lost target
+                {
+                    timeSinceLostTarget = 0;
+                }
+
+            }
+
+            Vector3 toBase = originPosition - transform.position;
+            toBase.y = 0;
+
+            animator.SetBool(hashNearBase, toBase.magnitude < 0.01f);
         }
 
-        // method is only part of unity editor for debugging purposes only
+        private IEnumerator WaitOnPursuit()
+        {
+            yield return new WaitForSeconds(waitUntilMove);
+            enemyController.SetFollowTarget(originPosition); // don't want to keep following player since pursuit has stopped so go back to origin pos
+        }
+
+        // method is part of unity editor for debugging purposes only
         // will not be part of production code
 #if UNITY_EDITOR
         // executed when monkey is selected (in scene view)
@@ -53,7 +85,7 @@ namespace DAUEscape
 
             Vector3 rotatedForward = Quaternion.Euler(
                 0,
-                -detectionAngle * 0.5f,
+                -playerScanner.detectionAngle * 0.5f,
                 0) * transform.forward;
 
             // Draw arc representing detection range of the monkey
@@ -61,8 +93,8 @@ namespace DAUEscape
                 transform.position,
                 Vector3.up,
                 rotatedForward,
-                detectionAngle,
-                detectionRadius);
+                playerScanner.detectionAngle,
+                playerScanner.detectionRadius);
         }
 #endif
     }
