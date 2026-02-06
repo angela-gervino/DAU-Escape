@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace DAUEscape
@@ -26,13 +27,15 @@ namespace DAUEscape
         private Animator animator;
         private Vector3 movement;
 
+        private readonly int hashAttack = Animator.StringToHash("Attack");
+
         private void Awake()
         {
             chController = GetComponent<CharacterController>();
             animator = GetComponent<Animator>();
 
             s_Instance = this;
-        }
+        }// Awake
 
 
         void FixedUpdate()
@@ -62,6 +65,15 @@ namespace DAUEscape
 
             RotatePlayer();
             MovePlayer();
+        }// FixedUpdate
+
+        private void Update()
+        {
+            animator.ResetTrigger(hashAttack);
+            if (Input.GetButtonDown("Fire1")) // left button on mouse
+            {
+                animator.SetTrigger(hashAttack);
+            }
         }
 
         private void RotatePlayer()
@@ -83,7 +95,7 @@ namespace DAUEscape
                         Time.fixedDeltaTime);
                 }
             }
-        }
+        }// RotatePlayer
 
         private void MovePlayer()
         {
@@ -98,7 +110,7 @@ namespace DAUEscape
                     chController.Move(-chController.transform.forward * Time.fixedDeltaTime * walkSpeed);
                 }
             }
-        }
+        }// MovePlayer
 
     }
 }

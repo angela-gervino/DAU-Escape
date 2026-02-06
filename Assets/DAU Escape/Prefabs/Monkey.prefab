@@ -1663,6 +1663,7 @@ GameObject:
   - component: {fileID: 8946090324407774769}
   - component: {fileID: 1388014634}
   - component: {fileID: 1388014635}
+  - component: {fileID: 243652798}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Untagged
@@ -1733,6 +1734,7 @@ MonoBehaviour:
     detectionAngle: 90
   timeToStopPursuit: 2
   waitUntilMove: 2
+  attackDistance: 1.1
 --- !u!195 &1388014634
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1767,6 +1769,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be18d5259d5680449e324ef02af9747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &243652798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218961054708209362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64ac6c2f4db70340852f23db424edf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100
 --- !u!1 &2339064737069603601
 GameObject:
   m_ObjectHideFlags: 0
