@@ -10,6 +10,7 @@ namespace DAUEscape
         public PlayerScanner playerScanner;
         public float timeToStopPursuit = 2.0f; // if target out of detection range for this many seconds, stop pursuit
         public float waitUntilMove = 2.0f; // when pursuit stops, how many seconds should NavMesh agent wait before moving again
+        public float attackDistance = 1.0f; // need to be closer than this distance to player in order to attack them
 
         private PlayerController m_Target;
         private EnemyController enemyController;
@@ -19,6 +20,7 @@ namespace DAUEscape
 
         private readonly int hashInPursuit = Animator.StringToHash("InPursuit"); // bool: is monkey currently chasing the player?
         private readonly int hashNearBase = Animator.StringToHash("NearBase"); // bool: is monkey close to its original position? 
+        private readonly int hashAttack = Animator.StringToHash("Attack");
 
         private void Awake()
         {
@@ -41,8 +43,17 @@ namespace DAUEscape
             }
             else
             {
-                enemyController.SetFollowTarget(m_Target.transform.position);
-                animator.SetBool(hashInPursuit, true);
+                Vector3 toTarget = m_Target.transform.position - transform.position;
+                if (toTarget.magnitude <= attackDistance)
+                {
+                    enemyController.StopFollowTarget();
+                    animator.SetTrigger(hashAttack);
+                }
+                else
+                {
+                    animator.SetBool(hashInPursuit, true);
+                    enemyController.FollowTarget(m_Target.transform.position);
+                }
 
                 if (target == null) // not in detection range
                 {
@@ -71,7 +82,7 @@ namespace DAUEscape
         private IEnumerator WaitOnPursuit()
         {
             yield return new WaitForSeconds(waitUntilMove);
-            enemyController.SetFollowTarget(originPosition); // don't want to keep following player since pursuit has stopped so go back to origin pos
+            enemyController.FollowTarget(originPosition); // don't want to keep following player since pursuit has stopped so go back to origin pos
         }
 
         // method is part of unity editor for debugging purposes only
