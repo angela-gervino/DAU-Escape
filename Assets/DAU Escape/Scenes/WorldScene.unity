@@ -367,6 +367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monkey
       objectReference: {fileID: 0}
+    - target: {fileID: 8946090324407774769, guid: b8b68ca92eb862244ae7fe5faf89b2b4, type: 3}
+      propertyPath: timeToStopPursuit
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8b68ca92eb862244ae7fe5faf89b2b4, type: 3}
 --- !u!1001 &8063504554430254493

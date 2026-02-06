@@ -12,16 +12,16 @@ namespace DAUEscape
         public float waitUntilMove = 2.0f; // when pursuit stops, how many seconds should NavMesh agent wait before moving again
         public float attackDistance = 1.0f; // need to be closer than this distance to player in order to attack them
 
-        private PlayerController m_Target;
+        private PlayerController currentTarget; // previously detected target that monkey is currently chasing/attacking
         private EnemyController enemyController;
         private Animator animator;
         private float timeSinceLostTarget = 0;
-        private Vector3 originalPosition;
-        private Quaternion originalRotation;
+        private Vector3 originalPosition; // monkey's position when the game starts
+        private Quaternion originalRotation; // monkey's rotation when the game starts
 
         private readonly int hashInPursuit = Animator.StringToHash("InPursuit"); // bool: is monkey currently chasing the player?
         private readonly int hashNearBase = Animator.StringToHash("NearBase"); // bool: is monkey close to its original position? 
-        private readonly int hashAttack = Animator.StringToHash("Attack");
+        private readonly int hashAttack = Animator.StringToHash("Attack"); // trigger
 
         private void Awake()
         {
@@ -30,69 +30,88 @@ namespace DAUEscape
             animator = GetComponent<Animator>();
             originalPosition = transform.position;
             originalRotation = transform.rotation;
-        }
+        }// Awake
+
 
         private void Update()
         {
-            var target = playerScanner.Detect(transform);
+            var detectedTarget = playerScanner.Detect(transform);
 
-            if (m_Target == null)
+            if (detectedTarget != null) { currentTarget = detectedTarget; } // set target to follow/attack if one has been detected
+
+            if (currentTarget != null)
             {
-                if (target != null) // just detected target
-                {
-                    m_Target = target;
-                }
-            }
-            else
-            {
-                Vector3 toTarget = m_Target.transform.position - transform.position;
-                if (toTarget.magnitude <= attackDistance)
-                {
-                    enemyController.StopFollowTarget();
-                    animator.SetTrigger(hashAttack);
-                }
-                else
-                {
-                    animator.SetBool(hashInPursuit, true);
-                    enemyController.FollowTarget(m_Target.transform.position);
-                }
+                AttackOrFollowTarget(); // decide whether to attack or chase the detected target
 
-                if (target == null) // not in detection range
-                {
-                    timeSinceLostTarget += Time.deltaTime;
-
-                    if (timeSinceLostTarget >= timeToStopPursuit)
-                    {
-                        m_Target = null;
-                        animator.SetBool(hashInPursuit, false);
-                        StartCoroutine(WaitOnPursuit());
-                    }
-                }
-                else // target is in range so have not lost target
+                if (detectedTarget != null) // target is in the detection range (so they are not lost)
                 {
                     timeSinceLostTarget = 0;
                 }
-
+                else // target has been lost for some amount of time, check if monkey should continue chasing or stop
+                {
+                    CheckStopPursuit();
+                }
             }
 
+            PerformNearBaseTasks();
+        }// Update
+
+
+        private void PerformNearBaseTasks()
+        {
+            // if the monkey is back at its original position (near its base), rotate towards its original rotation
+            // set 'nearBase' bool appropriately
             Vector3 toBase = originalPosition - transform.position;
             toBase.y = 0;
 
             bool nearBase = toBase.magnitude < 0.01f;
             animator.SetBool(hashNearBase, nearBase);
 
-            if (nearBase && !m_Target) // at original position and not in pursuit
+            if (nearBase && !currentTarget) // at original position and not in pursuit
             {
                 // rotate towards original position
                 transform.rotation = Quaternion.Slerp(transform.rotation, originalRotation, Time.deltaTime * 5);
             }
-        }
+        }// PerformNearBaseTasks
+
+
+        private void AttackOrFollowTarget()
+        {
+            // determine whether to attack the target or chase them depending on how far the monkey is from the player
+            Vector3 toTarget = currentTarget.transform.position - transform.position;
+
+            if (toTarget.magnitude <= attackDistance) // in attacking distance so attack target
+            {
+                enemyController.StopFollowTarget();
+                animator.SetTrigger(hashAttack);
+            }
+            else // not in attacking distance so keep chasing them
+            {
+                animator.SetBool(hashInPursuit, true);
+                enemyController.FollowTarget(currentTarget.transform.position);
+            }
+        }// AttackorFollowTarget
+
+
+        private void CheckStopPursuit()
+        {
+            timeSinceLostTarget += Time.deltaTime;
+
+            if (timeSinceLostTarget >= timeToStopPursuit)
+            {
+                currentTarget = null;
+                animator.SetBool(hashInPursuit, false);
+                StartCoroutine(WaitOnPursuit());
+            }
+        }// StopPursuit();
+
 
         private IEnumerator WaitOnPursuit()
         {
             yield return new WaitForSeconds(waitUntilMove);
             enemyController.FollowTarget(originalPosition); // don't want to keep following player since pursuit has stopped so go back to origin pos
-        }
+        }// WaitOnPursuit
+
 
         // method is part of unity editor for debugging purposes only
         // will not be part of production code
