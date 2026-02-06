@@ -16,7 +16,8 @@ namespace DAUEscape
         private EnemyController enemyController;
         private Animator animator;
         private float timeSinceLostTarget = 0;
-        private Vector3 originPosition;
+        private Vector3 originalPosition;
+        private Quaternion originalRotation;
 
         private readonly int hashInPursuit = Animator.StringToHash("InPursuit"); // bool: is monkey currently chasing the player?
         private readonly int hashNearBase = Animator.StringToHash("NearBase"); // bool: is monkey close to its original position? 
@@ -27,7 +28,8 @@ namespace DAUEscape
             playerScanner = new PlayerScanner();
             enemyController = GetComponent<EnemyController>();
             animator = GetComponent<Animator>();
-            originPosition = transform.position;
+            originalPosition = transform.position;
+            originalRotation = transform.rotation;
         }
 
         private void Update()
@@ -73,16 +75,23 @@ namespace DAUEscape
 
             }
 
-            Vector3 toBase = originPosition - transform.position;
+            Vector3 toBase = originalPosition - transform.position;
             toBase.y = 0;
 
-            animator.SetBool(hashNearBase, toBase.magnitude < 0.01f);
+            bool nearBase = toBase.magnitude < 0.01f;
+            animator.SetBool(hashNearBase, nearBase);
+
+            if (nearBase && !m_Target) // at original position and not in pursuit
+            {
+                // rotate towards original position
+                transform.rotation = Quaternion.Slerp(transform.rotation, originalRotation, Time.deltaTime * 5);
+            }
         }
 
         private IEnumerator WaitOnPursuit()
         {
             yield return new WaitForSeconds(waitUntilMove);
-            enemyController.FollowTarget(originPosition); // don't want to keep following player since pursuit has stopped so go back to origin pos
+            enemyController.FollowTarget(originalPosition); // don't want to keep following player since pursuit has stopped so go back to origin pos
         }
 
         // method is part of unity editor for debugging purposes only
