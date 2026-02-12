@@ -18,7 +18,7 @@ namespace DAUEscape
 
         public Camera cam;
 
-        public float walkSpeed = 10;
+        public float walkSpeed = 2;
         public float rotationSpeed = 10;
 
         // s_ denotes static variables
@@ -76,6 +76,7 @@ namespace DAUEscape
             }
         }
 
+
         private void RotatePlayer()
         {
             if (movement.x != 0) // player is rotating left/right
@@ -96,6 +97,7 @@ namespace DAUEscape
                 }
             }
         }// RotatePlayer
+
 
         private void MovePlayer()
         {
