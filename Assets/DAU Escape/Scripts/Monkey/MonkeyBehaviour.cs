@@ -82,6 +82,10 @@ namespace DAUEscape
 
             if (toTarget.magnitude <= attackDistance) // in attacking distance so attack target
             {
+                // first: rotate towards player (slowly, so use Quaternion.Slerp)
+                var toTargetRotation = Quaternion.LookRotation(toTarget, Vector3.up);
+                transform.rotation = Quaternion.Slerp(transform.rotation, toTargetRotation, Time.deltaTime * 180);
+
                 enemyController.StopFollowTarget();
                 animator.SetTrigger(hashAttack);
             }
