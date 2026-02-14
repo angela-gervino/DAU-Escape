@@ -43,6 +43,7 @@
      <Compile Include="Assets\Monkey\Scripts\Monkey.cs" />
      <Compile Include="Assets\Monkey\Scripts\MonkeyCamera.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Monkey\MonkeyBehaviour.cs" />
+     <Compile Include="Assets\DAU Escape\Scripts\Weapons\MeleeWeapon.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Monkey\EnemyController.cs" />
      <None Include="Assets\Monkey\Monkey_readme.txt" />
     <Reference Include="UnityEngine">

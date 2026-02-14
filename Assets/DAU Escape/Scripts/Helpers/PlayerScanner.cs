@@ -8,6 +8,7 @@ public class PlayerScanner
 {
     public float detectionRadius = 10.0f;
     public float detectionAngle = 90.0f;
+    public float meleeDetectionRadius = 2.0f;
 
     public PlayerController Detect(Transform detector)
     {
@@ -22,8 +23,9 @@ public class PlayerScanner
         if (toPlayer.magnitude <= detectionRadius)
         {
             // check if player is within the circle sector of the detection range
-            // (monkey only sees forward and to its sides, not behind)
-            if (Vector3.Dot(toPlayer.normalized, detector.forward) > Mathf.Cos(detectionAngle * 0.5f * Mathf.Deg2Rad))
+            // or within the smaller meleeDetectionRadius
+            if ((Vector3.Dot(toPlayer.normalized, detector.forward) > Mathf.Cos(detectionAngle * 0.5f * Mathf.Deg2Rad))
+            || toPlayer.magnitude <= meleeDetectionRadius)
             {
                 return PlayerController.Instance;
             }

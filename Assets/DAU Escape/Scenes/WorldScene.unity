@@ -369,7 +369,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946090324407774769, guid: b8b68ca92eb862244ae7fe5faf89b2b4, type: 3}
       propertyPath: timeToStopPursuit
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946090324407774769, guid: b8b68ca92eb862244ae7fe5faf89b2b4, type: 3}
+      propertyPath: playerScanner.meleeDetectionRadius
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8b68ca92eb862244ae7fe5faf89b2b4, type: 3}
@@ -428,5 +432,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9133947531612684053, guid: 9d85f69944cf061448501c59248e1440, type: 3}
+      propertyPath: meleeWeapon
+      value: 
+      objectReference: {fileID: 8063504554430254495}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d85f69944cf061448501c59248e1440, type: 3}
+--- !u!1 &8063504554430254494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8982306480776177674, guid: 9d85f69944cf061448501c59248e1440, type: 3}
+  m_PrefabInstance: {fileID: 8063504554430254493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8063504554430254495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8063504554430254494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14aa9571b5ff747448615dea9b11c869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

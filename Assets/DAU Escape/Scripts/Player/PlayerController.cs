@@ -20,6 +20,7 @@ namespace DAUEscape
 
         public float walkSpeed = 2;
         public float rotationSpeed = 10;
+        public MeleeWeapon meleeWeapon;
 
         // s_ denotes static variables
         private static PlayerController s_Instance;
@@ -73,6 +74,8 @@ namespace DAUEscape
             if (Input.GetButtonDown("Fire1")) // left button on mouse
             {
                 animator.SetTrigger(hashAttack);
+                meleeWeapon.BeginAttack();
+
             }
         }
 

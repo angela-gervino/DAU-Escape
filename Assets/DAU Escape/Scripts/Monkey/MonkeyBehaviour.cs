@@ -134,6 +134,15 @@ namespace DAUEscape
                 rotatedForward,
                 playerScanner.detectionAngle,
                 playerScanner.detectionRadius);
+
+            // Draw circle representing smaller melee detection range around the monkey
+            UnityEditor.Handles.DrawSolidArc(
+                transform.position,
+                Vector3.up,
+                rotatedForward,
+                360,
+                playerScanner.meleeDetectionRadius
+            );
         }
 #endif
     }
