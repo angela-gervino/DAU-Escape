@@ -35,9 +35,15 @@ namespace DAUEscape
 
         private void Update()
         {
+            GuardPosition();
+        }// Update
+
+
+        private void GuardPosition()
+        {
             var detectedTarget = playerScanner.Detect(transform);
 
-            if (detectedTarget != null) { currentTarget = detectedTarget; } // set target to follow/attack if one has been detected
+            if (detectedTarget != null) { currentTarget = detectedTarget; } // set target to if one has been detected
 
             if (currentTarget != null)
             {
@@ -54,7 +60,7 @@ namespace DAUEscape
             }
 
             PerformNearBaseTasks();
-        }// Update
+        }// GuardPosition
 
 
         private void PerformNearBaseTasks()
@@ -82,19 +88,31 @@ namespace DAUEscape
 
             if (toTarget.magnitude <= attackDistance) // in attacking distance so attack target
             {
-                // first: rotate towards player (slowly, so use Quaternion.Slerp)
-                var toTargetRotation = Quaternion.LookRotation(toTarget, Vector3.up);
-                transform.rotation = Quaternion.Slerp(transform.rotation, toTargetRotation, Time.deltaTime * 180);
-
-                enemyController.StopFollowTarget();
-                animator.SetTrigger(hashAttack);
+                AttackTarget(toTarget);
             }
             else // not in attacking distance so keep chasing them
             {
-                animator.SetBool(hashInPursuit, true);
-                enemyController.FollowTarget(currentTarget.transform.position);
+                FollowTarget();
             }
         }// AttackorFollowTarget
+
+
+        private void AttackTarget(Vector3 toTarget)
+        {
+            // first: rotate towards player (slowly, so use Quaternion.Slerp)
+            var toTargetRotation = Quaternion.LookRotation(toTarget, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, toTargetRotation, Time.deltaTime * 180);
+
+            enemyController.StopFollowTarget();
+            animator.SetTrigger(hashAttack);
+        }// AttackTarget
+
+
+        private void FollowTarget()
+        {
+            animator.SetBool(hashInPursuit, true);
+            enemyController.FollowTarget(currentTarget.transform.position);
+        }// FollowTarget
 
 
         private void CheckStopPursuit()
@@ -105,14 +123,14 @@ namespace DAUEscape
             {
                 currentTarget = null;
                 animator.SetBool(hashInPursuit, false);
-                StartCoroutine(WaitOnPursuit());
+                StartCoroutine(WaitBeforeReturn());
             }
-        }// StopPursuit();
+        }// CheckStopPursuit();
 
 
-        private IEnumerator WaitOnPursuit()
+        private IEnumerator WaitBeforeReturn()
         {
-            yield return new WaitForSeconds(waitUntilMove);
+            yield return new WaitForSeconds(waitUntilMove); // wait this many seconds before returning to original position (base)
             enemyController.FollowTarget(originalPosition); // don't want to keep following player since pursuit has stopped so go back to origin pos
         }// WaitOnPursuit
 
