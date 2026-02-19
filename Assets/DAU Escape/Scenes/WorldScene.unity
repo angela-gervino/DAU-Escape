@@ -216,6 +216,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1576829244 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3733118842195931416, guid: 9d85f69944cf061448501c59248e1440, type: 3}
+  m_PrefabInstance: {fileID: 8063504554430254493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1877862158
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,3 +461,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  attackPoints:
+  - radius: 0.1
+    offset: {x: 0.04, y: 0.1, z: 0.42}
+    rootTransform: {fileID: 1576829244}
+  - radius: 0.1
+    offset: {x: 0.04, y: 0.3, z: 0.45}
+    rootTransform: {fileID: 1576829244}

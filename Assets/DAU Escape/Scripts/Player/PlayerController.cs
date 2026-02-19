@@ -74,9 +74,19 @@ namespace DAUEscape
             if (Input.GetButtonDown("Fire1")) // left button on mouse
             {
                 animator.SetTrigger(hashAttack);
-                meleeWeapon.BeginAttack();
+
 
             }
+        }
+
+        public void MeleeAttackStart()
+        {
+            meleeWeapon.BeginAttack();
+        }
+
+        public void MeleeAttackEnd()
+        {
+            meleeWeapon.EndAttack();
         }
 
 
