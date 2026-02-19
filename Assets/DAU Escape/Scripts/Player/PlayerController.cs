@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace DAUEscape
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour, IAttackAnimListener
     {
         // let enemy classes get access to player class through static variables
         public static PlayerController Instance
@@ -68,26 +68,27 @@ namespace DAUEscape
             MovePlayer();
         }// FixedUpdate
 
+
         private void Update()
         {
             animator.ResetTrigger(hashAttack);
             if (Input.GetButtonDown("Fire1")) // left button on mouse
             {
                 animator.SetTrigger(hashAttack);
-
-
             }
-        }
+        }// Update
+
 
         public void MeleeAttackStart()
         {
             meleeWeapon.BeginAttack();
-        }
+        }// MeleeAttackStart
+
 
         public void MeleeAttackEnd()
         {
             meleeWeapon.EndAttack();
-        }
+        }// MeleeAttackEnd
 
 
         private void RotatePlayer()

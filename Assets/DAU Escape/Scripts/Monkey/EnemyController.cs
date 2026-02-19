@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using DAUEscape;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : MonoBehaviour, IAttackAnimListener
 {
     private NavMeshAgent navMeshAgent;
     private Animator animator;
@@ -13,7 +14,20 @@ public class EnemyController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
-    }
+    }// Awake
+
+
+    public void MeleeAttackStart()
+    {
+
+    }// MeleeAttackStart
+
+
+    public void MeleeAttackEnd()
+    {
+
+    }// MeleeAttackEnd
+
 
     private void OnAnimatorMove()
     {
@@ -22,7 +36,8 @@ public class EnemyController : MonoBehaviour
             navMeshAgent.speed = (animator.deltaPosition / Time.fixedDeltaTime).magnitude * speedModifier;
         }
 
-    }
+    }// OnAnimatorMove
+
 
     public bool FollowTarget(Vector3 position)
     {
@@ -31,10 +46,11 @@ public class EnemyController : MonoBehaviour
             navMeshAgent.enabled = true;
         }
         return navMeshAgent.SetDestination(position);
-    }
+    }// FollowTarget
+
 
     public void StopFollowTarget()
     {
         navMeshAgent.enabled = false;
-    }
+    }// StopFollowTarget
 }
