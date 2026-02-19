@@ -5,4 +5,9 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     public int maxHP;
+
+    public void ApplyDamage()
+    {
+        Debug.Log("Applying Damage");
+    }
 }

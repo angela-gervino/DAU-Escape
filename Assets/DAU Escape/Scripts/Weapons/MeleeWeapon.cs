@@ -23,6 +23,7 @@ namespace DAUEscape
 
         private bool isAttacking;
         private Vector3[] originalAttackPositions;
+        private RaycastHit[] rayCastHitCache = new RaycastHit[32];
 
         private void FixedUpdate()
         {
@@ -33,13 +34,51 @@ namespace DAUEscape
                     // want to draw in the world space but offset is tracked according to local space so convert it
                     AttackPoint ap = attackPoints[i];
                     Vector3 worldPos = ap.rootTransform.position + ap.rootTransform.TransformVector(ap.offset);
-                    Vector3 attackVector = worldPos - originalAttackPositions[0];
+                    Vector3 attackVector = (worldPos - originalAttackPositions[0]).normalized;
 
-                    Ray r = new Ray(worldPos, attackVector); // vector starting from worldPos in the direction of attackVector
+                    Ray ray = new Ray(worldPos, attackVector); // vector starting from worldPos in the direction of attackVector
                     Debug.DrawRay(worldPos, attackVector, Color.red, 4.0f);
+
+                    // cast sphere along the direction of the ray
+                    // contacts > 0 means that the weapon made contact with a collider through one of the rays
+                    // ~0 means enable all of the layers (~ is negation)
+                    int contacts = Physics.SphereCastNonAlloc(
+                        ray,
+                        ap.radius,
+                        rayCastHitCache,
+                        attackVector.magnitude,
+                        ~0,
+                        QueryTriggerInteraction.Ignore
+                    );
+
+                    for (int k = 0; k < contacts; k++)
+                    {
+                        Collider collider = rayCastHitCache[k].collider;
+                        if (collider != null)
+                        {
+                            // many game objects have colliders, but not all of them are damageable
+                            // check if object can take damage
+                            CheckDamage(collider, ap);
+                        }
+                    }
+
+                    originalAttackPositions[0] = worldPos; // in next update, pos will be previous pos
                 }
             }
         }
+
+
+        private void CheckDamage(Collider other, AttackPoint ap)
+        {
+            Damageable damageable = other.GetComponent<Damageable>();
+
+            if (damageable != null)
+            {
+                // can apply damage
+                damageable.ApplyDamage();
+            }
+        }
+
 
         public void BeginAttack()
         {
