@@ -5,7 +5,7 @@ using UnityEngine.Analytics;
 
 namespace DAUEscape
 {
-    public class MonkeyBehaviour : MonoBehaviour
+    public class MonkeyBehaviour : MonoBehaviour, IMessageReceiver
     {
         public PlayerScanner playerScanner;
         public float timeToStopPursuit = 2.0f; // if target out of detection range for this many seconds, stop pursuit
@@ -14,7 +14,6 @@ namespace DAUEscape
 
         private PlayerController currentTarget; // previously detected target that monkey is currently chasing/attacking
         private EnemyController enemyController;
-        private Animator animator;
         private float timeSinceLostTarget = 0;
         private Vector3 originalPosition; // monkey's position when the game starts
         private Quaternion originalRotation; // monkey's rotation when the game starts
@@ -22,12 +21,13 @@ namespace DAUEscape
         private readonly int hashInPursuit = Animator.StringToHash("InPursuit"); // bool: is monkey currently chasing the player?
         private readonly int hashNearBase = Animator.StringToHash("NearBase"); // bool: is monkey close to its original position? 
         private readonly int hashAttack = Animator.StringToHash("Attack"); // trigger
+        private readonly int hashHurt = Animator.StringToHash("Hurt"); // trigger
+        private readonly int hashDead = Animator.StringToHash("Dead"); // trigger
 
         private void Awake()
         {
-            playerScanner = new PlayerScanner();
             enemyController = GetComponent<EnemyController>();
-            animator = GetComponent<Animator>();
+
             originalPosition = transform.position;
             originalRotation = transform.rotation;
         }// Awake
@@ -37,6 +37,35 @@ namespace DAUEscape
         {
             GuardPosition();
         }// Update
+
+
+        public void OnReceiveMessage(MessageType type)
+        {
+            switch (type)
+            {
+                case MessageType.DEAD:
+                    OnDead();
+                    break;
+                case MessageType.DAMAGED:
+                    OnReceiveDamage();
+                    break;
+                default:
+                    break;
+
+            }
+        }// OnReceiveMessage
+
+
+        private void OnReceiveDamage()
+        {
+            enemyController.Animator.SetTrigger(hashHurt);
+        }// OnReceiveDamage
+
+
+        private void OnDead()
+        {
+            enemyController.Animator.SetTrigger(hashDead);
+        }// OnDead
 
 
         private void GuardPosition()
@@ -71,7 +100,7 @@ namespace DAUEscape
             toBase.y = 0;
 
             bool nearBase = toBase.magnitude < 0.01f;
-            animator.SetBool(hashNearBase, nearBase);
+            enemyController.Animator.SetBool(hashNearBase, nearBase);
 
             if (nearBase && !currentTarget) // at original position and not in pursuit
             {
@@ -104,13 +133,13 @@ namespace DAUEscape
             transform.rotation = Quaternion.Slerp(transform.rotation, toTargetRotation, Time.deltaTime * 180);
 
             enemyController.StopFollowTarget();
-            animator.SetTrigger(hashAttack);
+            enemyController.Animator.SetTrigger(hashAttack);
         }// AttackTarget
 
 
         private void FollowTarget()
         {
-            animator.SetBool(hashInPursuit, true);
+            enemyController.Animator.SetBool(hashInPursuit, true);
             enemyController.FollowTarget(currentTarget.transform.position);
         }// FollowTarget
 
@@ -122,7 +151,7 @@ namespace DAUEscape
             if (timeSinceLostTarget >= timeToStopPursuit)
             {
                 currentTarget = null;
-                animator.SetBool(hashInPursuit, false);
+                enemyController.Animator.SetBool(hashInPursuit, false);
                 StartCoroutine(WaitBeforeReturn());
             }
         }// CheckStopPursuit();

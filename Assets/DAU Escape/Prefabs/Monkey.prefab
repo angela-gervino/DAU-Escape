@@ -1664,7 +1664,9 @@ GameObject:
   - component: {fileID: 1388014634}
   - component: {fileID: 1388014635}
   - component: {fileID: 243652798}
-  m_Layer: 0
+  - component: {fileID: 1072580895}
+  - component: {fileID: 1451095171622221831}
+  m_Layer: 6
   m_Name: Monkey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1680,7 +1682,7 @@ Transform:
   m_GameObject: {fileID: 2218961054708209362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.8184834, y: 0, z: -0.13223982}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6888236532685339848}
   - {fileID: 4177391155809233483}
@@ -1732,6 +1734,7 @@ MonoBehaviour:
   playerScanner:
     detectionRadius: 10
     detectionAngle: 90
+    meleeDetectionRadius: 2
   timeToStopPursuit: 2
   waitUntilMove: 2
   attackDistance: 1.1
@@ -1781,7 +1784,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64ac6c2f4db70340852f23db424edf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  invulnerabilityTime: 1
+  maxHP: 30
+  onDamageMessageReceivers:
+  - {fileID: 8946090324407774769}
+--- !u!136 &1072580895
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218961054708209362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1451095171622221831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218961054708209362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a9e67b88441c04eb1e67a30f62ab0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragdollPrefab: {fileID: 1433101463516890593, guid: 772abba27bcc5af4e9f6ac562927bfbe, type: 3}
 --- !u!1 &2339064737069603601
 GameObject:
   m_ObjectHideFlags: 0

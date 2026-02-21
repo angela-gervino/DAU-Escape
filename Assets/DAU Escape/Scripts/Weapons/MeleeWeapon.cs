@@ -18,12 +18,14 @@ namespace DAUEscape
             public Transform rootTransform;
         }
 
+        public LayerMask targetLayers;
         public int damage = 10;
         public AttackPoint[] attackPoints = new AttackPoint[0];
 
         private bool isAttacking;
         private Vector3[] originalAttackPositions;
         private RaycastHit[] rayCastHitCache = new RaycastHit[32];
+        private GameObject owner; // owner of the weapon
 
         private void FixedUpdate()
         {
@@ -70,13 +72,26 @@ namespace DAUEscape
 
         private void CheckDamage(Collider other, AttackPoint ap)
         {
+
+            if ((targetLayers.value & (1 << other.gameObject.layer)) == 0)
+            {
+                return; // not hitting correct layer
+            }
+
             Damageable damageable = other.GetComponent<Damageable>();
 
             if (damageable != null)
             {
-                // can apply damage
-                damageable.ApplyDamage();
+                Damageable.DamageMessage data;
+                data.amount = damage;
+                data.damager = this;
+                damageable.ApplyDamage(data);
             }
+        }
+
+        public void SetOwner(GameObject weaponOwner)
+        {
+            owner = weaponOwner;
         }
 
 

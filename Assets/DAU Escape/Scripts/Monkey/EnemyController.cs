@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour, IAttackAnimListener
 {
+    public Animator Animator { get { return animator; } }
+
     private NavMeshAgent navMeshAgent;
     private Animator animator;
     private float speedModifier = 2; // make this < 1 if you want enemy slower or > 1 if you want enemy faster

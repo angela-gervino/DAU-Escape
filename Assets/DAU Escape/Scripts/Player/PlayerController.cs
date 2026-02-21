@@ -34,8 +34,9 @@ namespace DAUEscape
         {
             chController = GetComponent<CharacterController>();
             animator = GetComponent<Animator>();
-
             s_Instance = this;
+
+            meleeWeapon.SetOwner(gameObject);
         }// Awake
 
 
