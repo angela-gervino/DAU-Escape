@@ -22,6 +22,9 @@ namespace DAUEscape
         public float rotationSpeed = 10;
         public MeleeWeapon meleeWeapon;
 
+        private float gravity = 10.0f;
+        private float verticalSpeed;
+
         // s_ denotes static variables
         private static PlayerController s_Instance;
         private CharacterController chController;
@@ -42,6 +45,7 @@ namespace DAUEscape
 
         void FixedUpdate()
         {
+            ComputeVerticalMovement();
             movement.Set(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
             // x movement controls rotation and z movement controls forward/backward movement
@@ -80,6 +84,12 @@ namespace DAUEscape
         }// Update
 
 
+        private void ComputeVerticalMovement()
+        {
+            verticalSpeed = -gravity;
+        }// ComputeVerticalMovement
+
+
         public void MeleeAttackStart()
         {
             meleeWeapon.BeginAttack();
@@ -116,17 +126,23 @@ namespace DAUEscape
 
         private void MovePlayer()
         {
-            if (movement.z != 0) // player is moving forward/backward
+            // Move player up/down in y direction
+            Vector3 moveInDirection = verticalSpeed * Vector3.up * Time.fixedDeltaTime;
+
+            // Check if player should be moving in z direction too
+            if (movement.z != 0)
             {
                 if (movement.z > 0) // forward
                 {
-                    chController.Move(chController.transform.forward * Time.fixedDeltaTime * walkSpeed);
+                    moveInDirection += chController.transform.forward * Time.fixedDeltaTime * walkSpeed;
                 }
                 else // backward
                 {
-                    chController.Move(-chController.transform.forward * Time.fixedDeltaTime * walkSpeed);
+                    moveInDirection += -chController.transform.forward * Time.fixedDeltaTime * walkSpeed;
                 }
             }
+
+            chController.Move(moveInDirection);
         }// MovePlayer
 
     }

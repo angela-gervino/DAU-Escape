@@ -7,7 +7,7 @@ namespace DAUEscape
 {
     public class Dissolve : MonoBehaviour
     {
-        public float dissolveTime = 2.0f; // seconds
+        public float dissolveTime = 3.0f; // seconds
 
         private Renderer[] renderers;
 
@@ -24,7 +24,7 @@ namespace DAUEscape
         {
             if (Time.time < dissolveTime)
             {
-                double alpha = 1 - Math.Pow(Time.time / dissolveTime, 2); // want alpha to go to 0 as the time gets closer to dissolveTime
+                double alpha = 1 - Math.Pow(Time.time / dissolveTime, 3); // want alpha to go to 0 as the time gets closer to dissolveTime
 
                 foreach (Renderer rend in renderers)
                 {

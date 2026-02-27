@@ -434,6 +434,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5516595295780516430, guid: 9d85f69944cf061448501c59248e1440, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9133947531612684053, guid: 9d85f69944cf061448501c59248e1440, type: 3}
       propertyPath: meleeWeapon
       value: 
