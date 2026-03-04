@@ -8,9 +8,9 @@ namespace DAUEscape
     public class MonkeyBehaviour : MonoBehaviour, IMessageReceiver
     {
         public PlayerScanner playerScanner;
-        public float timeToStopPursuit = 2.0f; // if target out of detection range for this many seconds, stop pursuit
-        public float waitUntilMove = 2.0f; // when pursuit stops, how many seconds should NavMesh agent wait before moving again
-        public float attackDistance = 1.0f; // need to be closer than this distance to player in order to attack them
+        private float timeToStopPursuit = 2.0f; // if target out of detection range for this many seconds, stop pursuit
+        private float waitUntilMove = 2.0f; // when pursuit stops, how many seconds should NavMesh agent wait before moving again
+        private float attackDistance = 1.5f; // need to be closer than this distance to player in order to attack them
 
         private PlayerController currentTarget; // previously detected target that monkey is currently chasing/attacking
         private EnemyController enemyController;

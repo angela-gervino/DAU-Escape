@@ -16,17 +16,18 @@ namespace DAUEscape
             }
         }
 
-        public Camera cam;
-
-        public float walkSpeed = 2;
-        public float rotationSpeed = 10;
         public MeleeWeapon meleeWeapon;
 
         // s_ denotes static variables
         private static PlayerController s_Instance;
+
         private CharacterController chController;
         private Animator animator;
         private Vector3 movement;
+        private float walkSpeed = 10;
+        private float rotationSpeed = 1.3f;
+        private float gravity = -10.0f;
+
 
         private readonly int hashAttack = Animator.StringToHash("Attack");
 
@@ -101,14 +102,14 @@ namespace DAUEscape
                     chController.transform.rotation = Quaternion.Slerp(
                         transform.rotation,
                         Quaternion.LookRotation(transform.right),
-                        Time.fixedDeltaTime);
+                        Time.fixedDeltaTime * rotationSpeed);
                 }
                 else // rotating to the left
                 {
                     chController.transform.rotation = Quaternion.Slerp(
                         transform.rotation,
                         Quaternion.LookRotation(-transform.right),
-                        Time.fixedDeltaTime);
+                        Time.fixedDeltaTime * rotationSpeed);
                 }
             }
         }// RotatePlayer
@@ -116,17 +117,24 @@ namespace DAUEscape
 
         private void MovePlayer()
         {
+            Vector3 moveInDirection = gravity * Vector3.up * Time.fixedDeltaTime;
+            Vector3 chControllerFwd = chController.transform.forward;
+            chControllerFwd.y = 0;
+            chControllerFwd = chControllerFwd.normalized;
+
             if (movement.z != 0) // player is moving forward/backward
             {
                 if (movement.z > 0) // forward
                 {
-                    chController.Move(chController.transform.forward * Time.fixedDeltaTime * walkSpeed);
+                    moveInDirection += chControllerFwd * Time.fixedDeltaTime * walkSpeed;
                 }
                 else // backward
                 {
-                    chController.Move(-chController.transform.forward * Time.fixedDeltaTime * walkSpeed);
+                    moveInDirection += -chControllerFwd * Time.fixedDeltaTime * walkSpeed;
                 }
             }
+
+            chController.Move(moveInDirection);
         }// MovePlayer
 
     }
