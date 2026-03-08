@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace DAUEscape
 {
-    public class PlayerController : MonoBehaviour, IAttackAnimListener
+    public class PlayerController : MonoBehaviour, IAttackAnimListener, IMessageReceiver
     {
         // let enemy classes get access to player class through static variables
         public static PlayerController Instance
@@ -16,6 +16,8 @@ namespace DAUEscape
             }
         }
 
+        public bool IsRespawning { get { return isRespawning; } }
+
         public MeleeWeapon meleeWeapon;
 
         // s_ denotes static variables
@@ -24,17 +26,30 @@ namespace DAUEscape
         private CharacterController chController;
         private Animator animator;
         private Vector3 movement;
-        private float walkSpeed = 10;
+        private Damageable damageable;
+        private float walkSpeed = 15;
         private float rotationSpeed = 1.3f;
         private float gravity = -10.0f;
 
+        private AnimatorStateInfo currentStateInfo;
+        private AnimatorStateInfo nextStateInfo;
+        private bool isAnimatorTransitioning;
+        private bool inputBlocked;
+        private bool isRespawning;
 
+        // Animator Trigger Hashes
         private readonly int hashAttack = Animator.StringToHash("Attack");
+        private readonly int hashHurt = Animator.StringToHash("Hurt");
+        private readonly int hashDead = Animator.StringToHash("Dead");
+
+        // Animator Tag Hashes
+        private readonly int hashBlockInput = Animator.StringToHash("BlockInput");
 
         private void Awake()
         {
             chController = GetComponent<CharacterController>();
             animator = GetComponent<Animator>();
+            damageable = GetComponent<Damageable>();
             s_Instance = this;
 
             meleeWeapon.SetOwner(gameObject);
@@ -43,38 +58,47 @@ namespace DAUEscape
 
         void FixedUpdate()
         {
-            movement.Set(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            CacheAnimationState();
+            UpdateInputBlocking();
 
-            // x movement controls rotation and z movement controls forward/backward movement
-            if (Mathf.Approximately(movement.z, 0)) // not moving
+            if (isRespawning) { return; }
+
+            if (!inputBlocked)
             {
-                animator.SetBool("isMoving", false);
-                if (Mathf.Approximately(movement.x, 0)) // no rotating
+                movement.Set(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+                // x movement controls rotation and z movement controls forward/backward movement
+                if (Mathf.Approximately(movement.z, 0)) // not moving
                 {
-                    animator.SetBool("onlyRotating", false);
+                    animator.SetBool("isMoving", false);
+                    if (Mathf.Approximately(movement.x, 0)) // no rotating
+                    {
+                        animator.SetBool("onlyRotating", false);
+                    }
+                    else // no movement but is rotating
+                    {
+                        animator.SetBool("onlyRotating", true);
+                    }
                 }
-                else // no movement but is rotating
+                else // moving
                 {
-                    animator.SetBool("onlyRotating", true);
+                    animator.SetBool("isMoving", true);
+                    animator.SetBool("onlyRotating", false); // if moving don't animate for rotating
                 }
-            }
-            else // moving
-            {
-                animator.SetBool("isMoving", true);
-                animator.SetBool("onlyRotating", false); // if moving don't animate for rotating
+
+                animator.SetFloat("speed", Mathf.Max(Mathf.Abs(movement.z), Mathf.Abs(movement.x / 2.0f)));
+
+                RotatePlayer();
+                MovePlayer();
             }
 
-            animator.SetFloat("speed", Mathf.Max(Mathf.Abs(movement.z), Mathf.Abs(movement.x / 2.0f)));
-
-            RotatePlayer();
-            MovePlayer();
         }// FixedUpdate
 
 
         private void Update()
         {
             animator.ResetTrigger(hashAttack);
-            if (Input.GetButtonDown("Fire1")) // left button on mouse
+            if (Input.GetButtonDown("Fire1") && !inputBlocked) // left button on mouse and player input is not blocked
             {
                 animator.SetTrigger(hashAttack);
             }
@@ -91,6 +115,37 @@ namespace DAUEscape
         {
             meleeWeapon.EndAttack();
         }// MeleeAttackEnd
+
+
+        public void StartRespawn()
+        {
+            transform.position = Vector3.zero; // set this to the player's original position
+            damageable.ResetHP();
+        }
+
+
+        public void FinishRespawn()
+        {
+            isRespawning = false;
+        }
+
+
+        public void OnReceiveMessage(MessageType type)
+        {
+            switch (type)
+            {
+                case MessageType.DEAD:
+                    isRespawning = true;
+                    animator.SetTrigger(hashDead);
+                    break;
+                case MessageType.DAMAGED:
+                    animator.SetTrigger(hashHurt);
+                    break;
+                default:
+                    break;
+
+            }
+        }// OnReceiveMessage
 
 
         private void RotatePlayer()
@@ -137,6 +192,21 @@ namespace DAUEscape
             chController.Move(moveInDirection);
         }// MovePlayer
 
+
+        private void CacheAnimationState()
+        {
+            currentStateInfo = animator.GetCurrentAnimatorStateInfo(0); // animator state from default/base layer (0)
+            nextStateInfo = animator.GetNextAnimatorStateInfo(0);
+            isAnimatorTransitioning = animator.IsInTransition(0);
+        }// CacheAnimationState
+
+
+        // based on the current state (player animation or transition) we can block the player/user from providing input
+        private void UpdateInputBlocking()
+        {
+            inputBlocked = currentStateInfo.tagHash == hashBlockInput && !isAnimatorTransitioning;
+            inputBlocked |= nextStateInfo.tagHash == hashBlockInput; // curr state blocked, or one we're transitioning into is blocked
+        }// UpdateInputBlocking
     }
 }
 

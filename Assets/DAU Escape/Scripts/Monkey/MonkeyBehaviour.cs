@@ -35,8 +35,23 @@ namespace DAUEscape
 
         private void Update()
         {
+            if (PlayerController.Instance.IsRespawning)
+            {
+                GoToOriginalSpot();
+                PerformNearBaseTasks();
+                return;
+            }
+
             GuardPosition();
         }// Update
+
+
+        private void GoToOriginalSpot()
+        {
+            currentTarget = null;
+            enemyController.Animator.SetBool(hashInPursuit, false);
+            enemyController.FollowTarget(originalPosition);
+        }
 
 
         public void OnReceiveMessage(MessageType type)

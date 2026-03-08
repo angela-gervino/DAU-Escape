@@ -51,6 +51,12 @@ namespace DAUEscape
                 }
             }
         }// ApplyDamage
+
+
+        public void ResetHP()
+        {
+            currentHP = maxHP;
+        }// ResetHP
     }
 }
 

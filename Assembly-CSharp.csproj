@@ -44,13 +44,14 @@
      <Compile Include="Assets\DAU Escape\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Monkey\MonkeySMBAttack.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Monkey\ReplaceWithRagdoll.cs" />
+     <Compile Include="Assets\DAU Escape\Scripts\Graphics\Dissolve.cs" />
      <Compile Include="Assets\Monkey\Scripts\Monkey.cs" />
      <Compile Include="Assets\Monkey\Scripts\MonkeyCamera.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Events\IAttackAnimListener.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Monkey\MonkeyBehaviour.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Weapons\MeleeWeapon.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Monkey\EnemyController.cs" />
-     <Compile Include="Assets\DAU Escape\Scripts\Graphics\Dissolve.cs" />
+     <Compile Include="Assets\DAU Escape\Scripts\Player\PlayerRespawnSMB.cs" />
      <None Include="Assets\Monkey\Monkey_readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
