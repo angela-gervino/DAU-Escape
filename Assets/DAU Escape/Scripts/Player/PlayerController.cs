@@ -28,7 +28,7 @@ namespace DAUEscape
         private Vector3 movement;
         private Damageable damageable;
         private float walkSpeed = 15;
-        private float rotationSpeed = 1.3f;
+        private float rotationSpeed = 1.5f;
         private float gravity = -10.0f;
 
         private AnimatorStateInfo currentStateInfo;
