@@ -22,7 +22,7 @@ public class FollowCamera : MonoBehaviour
             0.5f
         );
 
-        transform.position = new Vector3(target.position.x, 3.0f, target.position.z);
+        transform.position = new Vector3(target.position.x, target.position.y + 3.0f, target.position.z); // 3.0f
 
         // currentRotationAngle degrees around the y-axis
         Quaternion currentRotation = Quaternion.Euler(0, currentRotationAngle, 0);
