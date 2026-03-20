@@ -27,7 +27,7 @@ namespace DAUEscape
         private Animator animator;
         private Vector3 movement;
         private Damageable damageable;
-        private float walkSpeed = 15;
+        private float walkSpeed = 10;
         private float rotationSpeed = 1.5f;
         private float gravity = -10.0f;
 
@@ -36,6 +36,9 @@ namespace DAUEscape
         private bool isAnimatorTransitioning;
         private bool inputBlocked;
         private bool isRespawning;
+
+        private Vector3 originalPosition;
+        private Quaternion originalRotation;
 
         // Animator Trigger Hashes
         private readonly int hashAttack = Animator.StringToHash("Attack");
@@ -51,6 +54,9 @@ namespace DAUEscape
             animator = GetComponent<Animator>();
             damageable = GetComponent<Damageable>();
             s_Instance = this;
+
+            originalPosition = transform.position;
+            originalRotation = transform.rotation;
 
             meleeWeapon.SetOwner(gameObject);
         }// Awake
@@ -119,7 +125,8 @@ namespace DAUEscape
 
         public void StartRespawn()
         {
-            transform.position = Vector3.zero; // set this to the player's original position
+            transform.position = originalPosition;
+            transform.rotation = originalRotation;
             damageable.ResetHP();
         }
 

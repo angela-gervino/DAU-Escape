@@ -1735,9 +1735,6 @@ MonoBehaviour:
     detectionRadius: 10
     detectionAngle: 90
     meleeDetectionRadius: 2
-  timeToStopPursuit: 2
-  waitUntilMove: 2
-  attackDistance: 1.1
 --- !u!195 &1388014634
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1772,6 +1769,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be18d5259d5680449e324ef02af9747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPoints:
+  - radius: 0.1
+    offset: {x: -0.1, y: 0.01, z: 0}
+    rootTransform: {fileID: 899241179179734554}
+  - radius: 0.1
+    offset: {x: 0.1, y: 0, z: 0}
+    rootTransform: {fileID: 2888382741094249763}
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &243652798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,7 +1792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invulnerabilityTime: 1
-  maxHP: 30
+  maxHP: 20
   onDamageMessageReceivers:
   - {fileID: 8946090324407774769}
 --- !u!136 &1072580895
