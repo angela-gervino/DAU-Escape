@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{739afebd-4c3a-0ade-6123-2a805561396f}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crest", "Crest.csproj", "{44e07911-654b-cc3a-8646-a2b01bd00ad9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crest.Examples", "Crest.Examples.csproj", "{6f1174e4-61e5-4086-850e-c77513ea77eb}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crest.Helpers.Editor", "Crest.Helpers.Editor.csproj", "{5c77629e-0c71-4092-e7ee-ab06b50c4839}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,6 +16,12 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{739afebd-4c3a-0ade-6123-2a805561396f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{739afebd-4c3a-0ade-6123-2a805561396f}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44e07911-654b-cc3a-8646-a2b01bd00ad9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44e07911-654b-cc3a-8646-a2b01bd00ad9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6f1174e4-61e5-4086-850e-c77513ea77eb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6f1174e4-61e5-4086-850e-c77513ea77eb}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5c77629e-0c71-4092-e7ee-ab06b50c4839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5c77629e-0c71-4092-e7ee-ab06b50c4839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

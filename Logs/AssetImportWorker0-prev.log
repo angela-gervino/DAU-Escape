@@ -15,11 +15,11 @@ C:/Users/anger/DAU Escape
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-24045
+65273
 Successfully changed project path to: C:/Users/anger/DAU Escape
 C:/Users/anger/DAU Escape
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 326.10 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 42.49 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.30f1 (1fb1bf06830e)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56316
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004243 seconds.
+Registered in 0.002008 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 93.65 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 40.27 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.344 seconds
+- Completed reload, in  0.572 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1345ms)
-		BeginReloadAssembly (160ms)
+	ReloadAssembly (573ms)
+		BeginReloadAssembly (65ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1010ms)
-			LoadAssemblies (151ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (437ms)
+			LoadAssemblies (63ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (337ms)
+			SetupTypeCache (147ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (67ms)
-			SetupLoadedEditorAssemblies (394ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (168ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (94ms)
-				BeforeProcessingInitializeOnLoad (28ms)
-				ProcessInitializeOnLoadAttributes (183ms)
-				ProcessInitializeOnLoadMethodAttributes (78ms)
+				RefreshPlugins (40ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (85ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009035 seconds.
+Registered in 0.003527 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.417 seconds
+- Completed reload, in  0.963 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1429ms)
-		BeginReloadAssembly (207ms)
+	ReloadAssembly (964ms)
+		BeginReloadAssembly (148ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (1135ms)
-			LoadAssemblies (128ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (758ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (376ms)
+			SetupTypeCache (254ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (62ms)
-			SetupLoadedEditorAssemblies (448ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (290ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (125ms)
-				ProcessInitializeOnLoadAttributes (292ms)
-				ProcessInitializeOnLoadMethodAttributes (13ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (192ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
-Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1676 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 91.8 MB.
-System memory in use after: 91.9 MB.
+Unloading 1679 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.1 MB.
+System memory in use after: 94.2 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2143.
-Total: 4.068900 ms (FindLiveObjects: 0.202100 ms CreateObjectMapping: 0.076800 ms MarkObjects: 3.660500 ms  DeleteObjects: 0.128100 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2147.
+Total: 4.925600 ms (FindLiveObjects: 0.234200 ms CreateObjectMapping: 0.105000 ms MarkObjects: 4.388200 ms  DeleteObjects: 0.196900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,820 +131,54 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Yughues Free Palm Trees/NewLayer.terrainlayer
-  artifactKey: Guid(8e38e347df1c81648ae4ab9e2193a6f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Yughues Free Palm Trees/NewLayer.terrainlayer using Guid(8e38e347df1c81648ae4ab9e2193a6f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e76b803f1e18e4627823de92f622f8d2') in 0.175655 seconds 
+  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/NewLayer.terrainlayer
+  artifactKey: Guid(b14f541a12b22fe42b31da13ab9e56ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/NewLayer.terrainlayer using Guid(b14f541a12b22fe42b31da13ab9e56ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e10357f460db5bd42648daba44409fc') in 0.110784 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010505 seconds.
+Registered in 0.005911 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.122 seconds
+- Completed reload, in  1.272 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1122ms)
-		BeginReloadAssembly (143ms)
+	ReloadAssembly (1273ms)
+		BeginReloadAssembly (158ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (39ms)
-		EndReloadAssembly (902ms)
-			LoadAssemblies (119ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1022ms)
+			LoadAssemblies (142ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (305ms)
+			SetupTypeCache (353ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (346ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (386ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (92ms)
-				ProcessInitializeOnLoadAttributes (227ms)
-				ProcessInitializeOnLoadMethodAttributes (11ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.62 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1670 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.7 MB.
-System memory in use after: 95.4 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2152.
-Total: 5.363600 ms (FindLiveObjects: 0.288700 ms CreateObjectMapping: 0.077400 ms MarkObjects: 3.796900 ms  DeleteObjects: 1.199000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 431.375809 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks
-  artifactKey: Guid(e2272ccdfc6870f4b962910707e21594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks using Guid(e2272ccdfc6870f4b962910707e21594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c396160924c233940381df79bc335bb') in 0.016266 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.088281 seconds.
-  path: Assets/Rocks and Boulders 2/Shaders
-  artifactKey: Guid(bdbfe955574381a4998135de90b4877d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Shaders using Guid(bdbfe955574381a4998135de90b4877d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0ef94dd908b8dc5c51e163344ea9e9') in 0.016106 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.377642 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow
-  artifactKey: Guid(6bba2768ac76dcf42a9d15e9717c8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow using Guid(6bba2768ac76dcf42a9d15e9717c8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2d84c21cdf544f00736e18796cee6cc') in 0.016753 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.186708 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source
-  artifactKey: Guid(603243e9341260040ac33bef7eb69850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source using Guid(603243e9341260040ac33bef7eb69850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '520f9fad2fb7380c63d79745bf37e7f4') in 0.013150 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.795073 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs
-  artifactKey: Guid(8e74734055c3cf64dbbb0f1793dc9764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs using Guid(8e74734055c3cf64dbbb0f1793dc9764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfa8f3a9ec857686aed47b74150882ab') in 0.014619 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.058363 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup1.prefab
-  artifactKey: Guid(54a9cf01843431742a3126013891032d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup1.prefab using Guid(54a9cf01843431742a3126013891032d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85701183eca5c4e63ecccae4cb4d1f16') in 0.357433 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000385 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock5B.prefab
-  artifactKey: Guid(977e7278d3486f1489724a6d226b9ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock5B.prefab using Guid(977e7278d3486f1489724a6d226b9ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5880fb1665ca5ff7480fe9d7bf535d81') in 0.071794 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000543 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock6B.prefab
-  artifactKey: Guid(fb5464049dae54247bf24c0e536cd6b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock6B.prefab using Guid(fb5464049dae54247bf24c0e536cd6b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aea0acd8c90faefff1cb5978818c356') in 0.067400 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000396 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock6A.prefab
-  artifactKey: Guid(ad1f5855a33f0694886cbd301d99cc40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock6A.prefab using Guid(ad1f5855a33f0694886cbd301d99cc40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59b663a46c9492729c5f25f02746e78b') in 0.067931 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000475 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1A.prefab
-  artifactKey: Guid(d209be13548e70947bc39053977ce977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1A.prefab using Guid(d209be13548e70947bc39053977ce977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '712539620681823b615b5079d6a67575') in 0.050875 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000445 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock4A.prefab
-  artifactKey: Guid(5f36b57d675b1444cb2203b7a6cac6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock4A.prefab using Guid(5f36b57d675b1444cb2203b7a6cac6cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '339dd36b2c1fbaaf9143b49efe933273') in 0.036630 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000312 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup3.prefab
-  artifactKey: Guid(f20a15ee7150fd647af421022dde4d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup3.prefab using Guid(f20a15ee7150fd647af421022dde4d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0634958993887aa2e384fbb102edfb64') in 0.041269 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000407 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1D.prefab
-  artifactKey: Guid(5d4cffe5f1249a046b3bc42bbd99dc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1D.prefab using Guid(5d4cffe5f1249a046b3bc42bbd99dc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c7ef1523ffa392e723bf948f538096') in 0.036584 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000443 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup5.prefab
-  artifactKey: Guid(0c076a1a077b8b04aaa5c16a2af6d4fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup5.prefab using Guid(0c076a1a077b8b04aaa5c16a2af6d4fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f795ca6b92bdb6db3d667759a7dad1b') in 0.036342 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup5.prefab
-  artifactKey: Guid(f696a81957e80df439600b80ea8667ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup5.prefab using Guid(f696a81957e80df439600b80ea8667ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39772dfb7db4033fd5a06820f1d412d4') in 0.055919 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000333 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock5A.prefab
-  artifactKey: Guid(27bfdb9a40efac94b969eaf77cea92d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock5A.prefab using Guid(27bfdb9a40efac94b969eaf77cea92d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa3faaa6d32d2ac484892e9fc9852008') in 0.038084 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000364 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup2.prefab
-  artifactKey: Guid(272f6ea372a7343499b5aa612014761f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup2.prefab using Guid(272f6ea372a7343499b5aa612014761f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b752d9c6b3dcfcf21778fb6b76e103c7') in 0.037405 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000477 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup3.prefab
-  artifactKey: Guid(059c81de61f2d4e4cbe522492d0181da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup3.prefab using Guid(059c81de61f2d4e4cbe522492d0181da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40fd677cc4801c41aedbc8fef2de1e46') in 0.037482 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000400 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup1.prefab
-  artifactKey: Guid(76075d4f24491b84eb0b4ac914362e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup1.prefab using Guid(76075d4f24491b84eb0b4ac914362e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cad7d79e318c41bc505ac2fbc15ffe4') in 0.036391 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000605 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock4B.prefab
-  artifactKey: Guid(55f94b3dfaaba26458dbf470efc8cfa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock4B.prefab using Guid(55f94b3dfaaba26458dbf470efc8cfa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70425037f9f0d96aca4e8529d1824e18') in 0.038805 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000417 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1C.prefab
-  artifactKey: Guid(1679506d96acb1447aa6870479416bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1C.prefab using Guid(1679506d96acb1447aa6870479416bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd17bf12e4a268f8c624472fe9b0cd0b0') in 0.037081 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000364 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock6C.prefab
-  artifactKey: Guid(d9c3d22cdfbbcfd4f8d8019ff97a0f2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock6C.prefab using Guid(d9c3d22cdfbbcfd4f8d8019ff97a0f2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88d6875e65985d0a9b69795ba0ff0e15') in 0.039978 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000512 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup4.prefab
-  artifactKey: Guid(1ee76940f560f654fbbe86776c26942b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup4.prefab using Guid(1ee76940f560f654fbbe86776c26942b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43f9e5a284288af44f0b61ff01560d10') in 0.041011 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000525 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock3.prefab
-  artifactKey: Guid(f282d9fb9b399dd4384b20aba08642fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock3.prefab using Guid(f282d9fb9b399dd4384b20aba08642fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7553cf5adb810b4a85a06a5f250c639') in 0.042932 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000335 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1E.prefab
-  artifactKey: Guid(d2db22038a6f9804598cd46453cc7cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1E.prefab using Guid(d2db22038a6f9804598cd46453cc7cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba49015b06c0a00504cc818b2c6e1c2b') in 0.089969 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000541 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1B.prefab
-  artifactKey: Guid(0f1e1518a80e562458930d8b2d0670d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1B.prefab using Guid(0f1e1518a80e562458930d8b2d0670d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5825ee3c33bca2fb0378755714eb4a70') in 0.057810 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000464 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup2.prefab
-  artifactKey: Guid(dceeca3e930a413458913fd2f889e527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1LOD_grup2.prefab using Guid(dceeca3e930a413458913fd2f889e527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5d8968e87ed17f871aaeb52f10f8bd2') in 0.038214 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000431 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup4.prefab
-  artifactKey: Guid(6b9fd6eae9eb0d546ae14cdaee6d1156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock1_grup4.prefab using Guid(6b9fd6eae9eb0d546ae14cdaee6d1156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aedf5a4165a8518e594c8ca34b6b5e2') in 0.042987 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000509 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock2.prefab
-  artifactKey: Guid(940d55d4117386f4f9398ea3ff52d4cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs/Rock2.prefab using Guid(940d55d4117386f4f9398ea3ff52d4cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4487b241f31b35cfa6e3076d21222fc6') in 0.039199 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.840777 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup1.prefab
-  artifactKey: Guid(564ee2d9da8d5fa4ca9d1b7054064847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup1.prefab using Guid(564ee2d9da8d5fa4ca9d1b7054064847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff30639909382453c30199597e31f025') in 0.038585 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000545 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock6B.prefab
-  artifactKey: Guid(083e56e07a6e31f47bda0bab778d3ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock6B.prefab using Guid(083e56e07a6e31f47bda0bab778d3ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '033a654b85996d890df1a685579e6cc4') in 0.047027 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000565 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup4.prefab
-  artifactKey: Guid(42b65c30a64bfc9438498b2acee449a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup4.prefab using Guid(42b65c30a64bfc9438498b2acee449a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5769f08949492aac423be2e221dfd0') in 0.051099 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000322 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1D.prefab
-  artifactKey: Guid(805c67df44184af4397411e0ea8b8c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1D.prefab using Guid(805c67df44184af4397411e0ea8b8c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a68059d9384ae95245f2bb6596349a7') in 0.047680 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock6A.prefab
-  artifactKey: Guid(c445b94c5f10cc14db838116d8e08868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock6A.prefab using Guid(c445b94c5f10cc14db838116d8e08868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49bcf23bdc4b2254cef7f02270152234') in 0.040922 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000364 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock3.prefab
-  artifactKey: Guid(129cfb255bc090342ac36842d5d2d4ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock3.prefab using Guid(129cfb255bc090342ac36842d5d2d4ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c039212b6af0cbfc5edc5e01c9796f25') in 0.037815 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000389 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock2.prefab
-  artifactKey: Guid(d6b40ce3457ff954e8faab16436c9d29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock2.prefab using Guid(d6b40ce3457ff954e8faab16436c9d29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c80506ebfe296cb349b6d4f745fdd2') in 0.038724 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000355 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock5B.prefab
-  artifactKey: Guid(29599744f5049f148a2f191725b6d22b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock5B.prefab using Guid(29599744f5049f148a2f191725b6d22b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7681e9a4a3129bbd7168e0937bf802cb') in 0.047672 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1A.prefab
-  artifactKey: Guid(f28e8463f4463eb48afeccffe267583f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1A.prefab using Guid(f28e8463f4463eb48afeccffe267583f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f2dbbc2d89f7495439545b684dff3b2') in 0.045522 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000534 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1E.prefab
-  artifactKey: Guid(0241c83bd39a3124fad536563eedb302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1E.prefab using Guid(0241c83bd39a3124fad536563eedb302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb661ea4dfd990ebdd9891bb0a92a100') in 0.048042 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000342 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1C.prefab
-  artifactKey: Guid(78018422469a48a40bb2bb44eb8c5d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1C.prefab using Guid(78018422469a48a40bb2bb44eb8c5d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d89baae467f1e40f85728f879b0361d') in 0.043476 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000337 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock5A.prefab
-  artifactKey: Guid(2ee8881034f2f8344a6c8fce758b5513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock5A.prefab using Guid(2ee8881034f2f8344a6c8fce758b5513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc9c35d023886ba2b0b609873632e1af') in 0.039415 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000730 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup2.prefab
-  artifactKey: Guid(b94f8f8da47ae2a4c81242eb6b7d3536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup2.prefab using Guid(b94f8f8da47ae2a4c81242eb6b7d3536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b81fe2b1309155dd02f82d43a1a520e6') in 0.042934 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup4.prefab
-  artifactKey: Guid(bf6a1a77eb8dd9e4081b94f6b53896b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup4.prefab using Guid(bf6a1a77eb8dd9e4081b94f6b53896b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bb8ebca76b5738a454a52010757fee7') in 0.046369 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock4B.prefab
-  artifactKey: Guid(6f6a773cf2d27e24fa51d3392d6a241a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock4B.prefab using Guid(6f6a773cf2d27e24fa51d3392d6a241a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ed3d27c46f2e9c29d67df4ff374e49d') in 0.040437 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup3.prefab
-  artifactKey: Guid(8193811d456e8954ba1e1cc695b8b6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup3.prefab using Guid(8193811d456e8954ba1e1cc695b8b6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b9659be4ec4904fac5ceeda6077bbbd') in 0.043855 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000285 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock4A.prefab
-  artifactKey: Guid(87983935f31cb20419d017addd855376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock4A.prefab using Guid(87983935f31cb20419d017addd855376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '856455bc078b612b08d9d8b9994c261b') in 0.038456 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup5.prefab
-  artifactKey: Guid(cc97f7d64a5146f49895148c51f018b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup5.prefab using Guid(cc97f7d64a5146f49895148c51f018b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa67a670f3990b39dd28f1587c9963eb') in 0.040246 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock6C.prefab
-  artifactKey: Guid(3cdca21e3ff972741b53a424624c9654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock6C.prefab using Guid(3cdca21e3ff972741b53a424624c9654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2af6ec4f0fdfc947078d0c9ac9f48e7c') in 0.042151 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000229 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup3.prefab
-  artifactKey: Guid(8bd6b625311e9704787885a24a5bd6b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup3.prefab using Guid(8bd6b625311e9704787885a24a5bd6b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eef068b6d2b9dc5d015d4773649e3df') in 0.041977 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000425 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup2.prefab
-  artifactKey: Guid(af253cd095eb9d2489eaad42eb9d5087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup2.prefab using Guid(af253cd095eb9d2489eaad42eb9d5087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a9086ed1406dd55552ee0c4b4579b9') in 0.040127 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000565 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup5.prefab
-  artifactKey: Guid(5bf4c3bd12eed3040a89c71b45c451bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1_grup5.prefab using Guid(5bf4c3bd12eed3040a89c71b45c451bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de5b90899e8121ae18ff29a53c0746b4') in 0.045937 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000418 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1B.prefab
-  artifactKey: Guid(f624abb379f46594b976cb8664abb194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1B.prefab using Guid(f624abb379f46594b976cb8664abb194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e013a7b910f04fd4b1e59da2860ac00') in 0.042022 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000358 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup1.prefab
-  artifactKey: Guid(358464627c45ed2459452fec5a7663e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Prefabs_snow/Rock1LOD_grup1.prefab using Guid(358464627c45ed2459452fec5a7663e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c4e7ac1a58b1d12849766ccb14fd51') in 0.041381 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.027312 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures
-  artifactKey: Guid(ede29348a5fd36747b79158c4328a653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures using Guid(ede29348a5fd36747b79158c4328a653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e97c3b90e9d01af67150fc312b523dc') in 0.022257 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.082542 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/neutral.tif
-  artifactKey: Guid(55e05e8c1ca5996429a39a50faa136c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/neutral.tif using Guid(55e05e8c1ca5996429a39a50faa136c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '083fd4287ff0a848d6d7d09f6e8de5cf') in 0.078408 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000340 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_h.png
-  artifactKey: Guid(7235df9ad3bd98540b629d630d1f62c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_h.png using Guid(7235df9ad3bd98540b629d630d1f62c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cc9d58844e9691c8b4fc20b909f1943') in 0.026365 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000391 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_ms.png
-  artifactKey: Guid(6be0cac17b48f154d9703d89e90c4dac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_ms.png using Guid(6be0cac17b48f154d9703d89e90c4dac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d5b7b615a8e67bebb46632fa925bf47') in 0.028399 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000453 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_snow.tif
-  artifactKey: Guid(64ae36b4bdd83844aa64bb7fec019aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_snow.tif using Guid(64ae36b4bdd83844aa64bb7fec019aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e23cdd3f878d9b84bc114691ce7593c2') in 0.023505 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000349 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4.tif
-  artifactKey: Guid(092dca7a8192dd548a017b0eb2af8d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4.tif using Guid(092dca7a8192dd548a017b0eb2af8d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b2fef26ad6517e30d95bdbb227414dc') in 0.026633 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000375 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_snow.tif
-  artifactKey: Guid(b7a96b9d5a1c9ff49a691b1ae2e98959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_snow.tif using Guid(b7a96b9d5a1c9ff49a691b1ae2e98959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef33a90598a43c97de8605c763087b3f') in 0.025915 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000386 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_ms.png
-  artifactKey: Guid(a190f507abd111b468acabc651f904ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_ms.png using Guid(a190f507abd111b468acabc651f904ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e71c27f0f98ed483b559bbf50fad23') in 0.029319 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000288 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_h.png
-  artifactKey: Guid(d522c8a14f47f2f4e94a216d1f8f4cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_h.png using Guid(d522c8a14f47f2f4e94a216d1f8f4cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f67d2faab85a554b1a911eb6bb850f7b') in 0.023958 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000397 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2.tif
-  artifactKey: Guid(162c810bf5419394188c1c46a5db065e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2.tif using Guid(162c810bf5419394188c1c46a5db065e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d276fc9462d583fe5f95a8f8837f19b') in 0.023197 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000404 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_ao.png
-  artifactKey: Guid(caa896f01dbad8a45afa58ec317b8538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_ao.png using Guid(caa896f01dbad8a45afa58ec317b8538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80e07341fea879b41e609fb5c03d60a1') in 0.027412 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000431 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_ms.png
-  artifactKey: Guid(e677615ec9e660f4691a28a7e6abbfa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_ms.png using Guid(e677615ec9e660f4691a28a7e6abbfa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aad6ed042dd4ce417dd412a9b034e04') in 0.026535 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000409 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_nmp.tif
-  artifactKey: Guid(42c12cb55ddd98245a0b2c96121c8a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_nmp.tif using Guid(42c12cb55ddd98245a0b2c96121c8a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f47eb247e5a7cf66fa30ee4f69272b0') in 0.032330 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000336 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_ao.png
-  artifactKey: Guid(ddad99722f2103e4c9a909f6cedf8ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_ao.png using Guid(ddad99722f2103e4c9a909f6cedf8ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea80e034fbe8ff3167a1991925c0f609') in 0.025436 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000517 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_ao.png
-  artifactKey: Guid(4253a798b9e853147adf917a51a2b97a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_ao.png using Guid(4253a798b9e853147adf917a51a2b97a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3130ae2569096418bca182b3ab44deb1') in 0.027132 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000475 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_snow.tif
-  artifactKey: Guid(f2eda5f416012234b9a9af83bb3797f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_snow.tif using Guid(f2eda5f416012234b9a9af83bb3797f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99d70ffa4e9d3d4b8cda676483f15769') in 0.026142 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000427 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/neutral_nmp.tif
-  artifactKey: Guid(be834ced0f6dfe5449701caebb2023c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/neutral_nmp.tif using Guid(be834ced0f6dfe5449701caebb2023c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e5b6909b1cc35ef059649c1a86cb477') in 0.021618 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000380 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_nmp.tif
-  artifactKey: Guid(3a821c28b70b2b447ab3e66e3a2229e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_nmp.tif using Guid(3a821c28b70b2b447ab3e66e3a2229e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a34ccb5d7c5d83bd5b3478833d04c2be') in 0.029540 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000371 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_h.png
-  artifactKey: Guid(a639ed01446aa774992a6d74a1260740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_h.png using Guid(a639ed01446aa774992a6d74a1260740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61e21ed6d38c3fa1f4fcca2aa289ca73') in 0.026284 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000315 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_ao.png
-  artifactKey: Guid(11cb6765864eda847a33cdceac63bbc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_ao.png using Guid(11cb6765864eda847a33cdceac63bbc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886ca6d763013b7ee6ba1659cd575913') in 0.024155 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000384 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_snow.tif
-  artifactKey: Guid(aad243781a5f31341b964f5551b8f7df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1_snow.tif using Guid(aad243781a5f31341b964f5551b8f7df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21404d3da5124132c74381ad27988deb') in 0.024817 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000406 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_h.png
-  artifactKey: Guid(6dd76acee04f2924bb8c511065faef9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_h.png using Guid(6dd76acee04f2924bb8c511065faef9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '134d05790189ce27906cd5ef77bd0ee0') in 0.025279 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000350 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_nmp.tif
-  artifactKey: Guid(9097a6a42d07fe2479d0545fcd6b6280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_nmp.tif using Guid(9097a6a42d07fe2479d0545fcd6b6280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b30970d356c9ba981a97da8277ed093') in 0.027230 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000383 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_nmp.tif
-  artifactKey: Guid(c208f128e624c474bb2241affee1c866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_nmp.tif using Guid(c208f128e624c474bb2241affee1c866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1667bf675fe0883d6cdab2141f14b53') in 0.028686 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000356 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_snow.tif
-  artifactKey: Guid(ff05ac7b888a0384186a6037880d355b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_snow.tif using Guid(ff05ac7b888a0384186a6037880d355b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce29c46e70c9f12ef045901fd38cfb32') in 0.024114 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000516 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_ao.png
-  artifactKey: Guid(e33cfde976023144c9866837549818a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_ao.png using Guid(e33cfde976023144c9866837549818a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f05e7e70a719cf5b0e3371454bde90a') in 0.025032 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000388 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5.tif
-  artifactKey: Guid(312c93ed564bd8840ab4818e3db14d8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5.tif using Guid(312c93ed564bd8840ab4818e3db14d8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cadf595039fa06d056e2bcd18094d8dd') in 0.025140 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000355 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_ms.png
-  artifactKey: Guid(e31eafdbd8a85f34ab9dcd2fc9021997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3_ms.png using Guid(e31eafdbd8a85f34ab9dcd2fc9021997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d1c23c7122b2ea76180605da83de2af') in 0.027621 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000335 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_ao.png
-  artifactKey: Guid(f6526ae33cace7c46ab54463669ab556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_ao.png using Guid(f6526ae33cace7c46ab54463669ab556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37aac32e4d5e2fb883d2b796230b28f1') in 0.024942 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1.tif
-  artifactKey: Guid(d0692a948ca573d4cb0b93ffb1c8a033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock1.tif using Guid(d0692a948ca573d4cb0b93ffb1c8a033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cace9508b6ac9677b4e0f62088d57d02') in 0.025955 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000395 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6.tif
-  artifactKey: Guid(2c14dee6b3a5fa4448cc7da72765ddde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6.tif using Guid(2c14dee6b3a5fa4448cc7da72765ddde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80e6e04820e33b09e10fabe059119822') in 0.021743 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000432 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_h.png
-  artifactKey: Guid(0f4ca202c9a9aea47b30a1fa32effc1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_h.png using Guid(0f4ca202c9a9aea47b30a1fa32effc1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdfdc51ff91e2be5852963015f127576') in 0.029507 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000391 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3.tif
-  artifactKey: Guid(27cfd5114f148ff49acff242847ce022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock3.tif using Guid(27cfd5114f148ff49acff242847ce022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '569b0e367ae38583485ac80daad800e4') in 0.023584 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000417 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_ms.png
-  artifactKey: Guid(e0a129ea7aef5bf49a02cdc7e2c0c943) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock2_ms.png using Guid(e0a129ea7aef5bf49a02cdc7e2c0c943) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8925b76750d2cc97f891ab8eea2b13bc') in 0.030874 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000420 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_h.png
-  artifactKey: Guid(ea5fa60747dcedc4cb9f54ae82142568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_h.png using Guid(ea5fa60747dcedc4cb9f54ae82142568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fad97d91ca314edc21b9791861987e2c') in 0.027625 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000374 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_nmp.tif
-  artifactKey: Guid(2a0dc6caeaf9cb64dae4372302735b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock4_nmp.tif using Guid(2a0dc6caeaf9cb64dae4372302735b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8aabc1c9227cfa241515b3986b0a58e') in 0.026841 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000420 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_nmp.tif
-  artifactKey: Guid(4e1f3e7249bd7764aa7993a48695ab65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_nmp.tif using Guid(4e1f3e7249bd7764aa7993a48695ab65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e78ad24648319131176fc1b69ef48126') in 0.027160 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000495 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_ms.png
-  artifactKey: Guid(007c7f9a6c3681e4aa289b2e0e210b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock5_ms.png using Guid(007c7f9a6c3681e4aa289b2e0e210b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fef332991d773c78143b1b39ab59118f') in 0.026911 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.645194 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_snow.tif
-  artifactKey: Guid(9ac312e76d15d504882249d38d6e0288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rock6_snow.tif using Guid(9ac312e76d15d504882249d38d6e0288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a24dcfb0a1ab0b4b391ac0296691e4') in 0.035828 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000434 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail4_nmp.tif
-  artifactKey: Guid(2c7455542485cce45988e19384b08d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail4_nmp.tif using Guid(2c7455542485cce45988e19384b08d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c91cb0278ed1904e49d148db3c72d370') in 0.030484 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000454 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail3.tif
-  artifactKey: Guid(85802eac53a318647b463cb048c1639d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail3.tif using Guid(85802eac53a318647b463cb048c1639d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1787c091d66377b67fc605b29d7b91f4') in 0.026603 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000442 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail5_nmp.tif
-  artifactKey: Guid(bcf25bfea0bfd70469ba400a885d4c1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail5_nmp.tif using Guid(bcf25bfea0bfd70469ba400a885d4c1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '440b9dc9a8d13587ee283d8aa8377542') in 0.027884 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000462 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail6_nmp.tif
-  artifactKey: Guid(c1ad52c6b913ce247ae933cd6d8cea55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail6_nmp.tif using Guid(c1ad52c6b913ce247ae933cd6d8cea55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fbd51d7f8c2ae6bd7bbc06972e648e7') in 0.025946 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000419 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail9.tif
-  artifactKey: Guid(30cc329797fd9684bb7c6608318df508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail9.tif using Guid(30cc329797fd9684bb7c6608318df508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '421c4fd03e948e0f85d20e4e81d7f489') in 0.024519 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000403 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail8_nmp.tif
-  artifactKey: Guid(bc51ce897c3829c408ba9c4bf9390954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail8_nmp.tif using Guid(bc51ce897c3829c408ba9c4bf9390954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e52d3b3655797cbc9674c7524cf8e48a') in 0.033112 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail2.tif
-  artifactKey: Guid(016e95565131cbe4bbe66d399a1c4efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail2.tif using Guid(016e95565131cbe4bbe66d399a1c4efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72d170f42f6c8f3d0d3ea8077c337470') in 0.031921 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000318 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail4.tif
-  artifactKey: Guid(adf62696ffb597d4a882df95345d744b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail4.tif using Guid(adf62696ffb597d4a882df95345d744b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf31631d3bb15c1d65b729312f954fa') in 0.023561 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000220 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail5.tif
-  artifactKey: Guid(686064a605073d24380ee520c591a335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail5.tif using Guid(686064a605073d24380ee520c591a335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8886b042a084eda05fdc0f9a15fb18c') in 0.023175 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000354 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail1_nmp.tif
-  artifactKey: Guid(0b099f8fbac461345b2a4bf38d9538e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail1_nmp.tif using Guid(0b099f8fbac461345b2a4bf38d9538e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c09178fa0fe9e155cd59022e98b86d27') in 0.023946 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail8.tif
-  artifactKey: Guid(7bf0f3566beb89f4fb8785f70c000c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail8.tif using Guid(7bf0f3566beb89f4fb8785f70c000c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc0cc214c80c04eb4ec9b9801a5614c0') in 0.022530 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail6.tif
-  artifactKey: Guid(98b867924d19a23419a46124897d4937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail6.tif using Guid(98b867924d19a23419a46124897d4937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa6998e27597067665dfa31bbcc458d3') in 0.022069 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000229 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail7.tif
-  artifactKey: Guid(4d45e1355977ee44ebffdf905fe30d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail7.tif using Guid(4d45e1355977ee44ebffdf905fe30d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71922e7507c2935bab8fba0c4242be5a') in 0.023240 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail3_nmp.tif
-  artifactKey: Guid(24bcc36f93b595a4c86ae1f93c308352) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail3_nmp.tif using Guid(24bcc36f93b595a4c86ae1f93c308352) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0fada72427630c7bdf238890cb6076b') in 0.021997 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000300 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail7_nmp.tif
-  artifactKey: Guid(5f77f20afa4153d47b190a7defc9edf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail7_nmp.tif using Guid(5f77f20afa4153d47b190a7defc9edf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '210645e34dabba5834061dfda04fb584') in 0.023706 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail1.tif
-  artifactKey: Guid(19b818e26c2922a488c06b1fbdae5df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail1.tif using Guid(19b818e26c2922a488c06b1fbdae5df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42416fb5a637e8628411ce5e1f77be77') in 0.025447 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail2_nmp.tif
-  artifactKey: Guid(047414cbd2e318e41a7d1557a27d36c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rocks and Boulders 2/Rocks/Source/Textures/Rockdetail2_nmp.tif using Guid(047414cbd2e318e41a7d1557a27d36c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da78d8d9b40194d577a2ca2e01354406') in 0.026223 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008066 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.401 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3402ms)
-		BeginReloadAssembly (394ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (19ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (106ms)
-		EndReloadAssembly (2816ms)
-			LoadAssemblies (333ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (976ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (184ms)
-			SetupLoadedEditorAssemblies (1047ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (250ms)
-				ProcessInitializeOnLoadAttributes (727ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
-				AfterProcessingInitializeOnLoad (25ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (21ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.36 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1669 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.9 MB.
-System memory in use after: 95.6 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2163.
-Total: 14.640100 ms (FindLiveObjects: 0.491100 ms CreateObjectMapping: 0.351400 ms MarkObjects: 9.688800 ms  DeleteObjects: 4.105400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008193 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.616 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1618ms)
-		BeginReloadAssembly (178ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (1337ms)
-			LoadAssemblies (161ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (475ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (66ms)
-			SetupLoadedEditorAssemblies (491ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (133ms)
-				ProcessInitializeOnLoadAttributes (319ms)
-				ProcessInitializeOnLoadMethodAttributes (15ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (252ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
 				AfterProcessingInitializeOnLoad (11ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1669 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.9 MB.
-System memory in use after: 95.6 MB.
+Unloading 1667 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 96.4 MB.
+System memory in use after: 96.5 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2165.
-Total: 4.780300 ms (FindLiveObjects: 0.186900 ms CreateObjectMapping: 0.083200 ms MarkObjects: 3.411600 ms  DeleteObjects: 1.097000 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2154.
+Total: 3.273300 ms (FindLiveObjects: 0.144100 ms CreateObjectMapping: 0.051700 ms MarkObjects: 3.046700 ms  DeleteObjects: 0.029800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
