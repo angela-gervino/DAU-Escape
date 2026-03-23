@@ -213,6 +213,7 @@ namespace DAUEscape
         {
             inputBlocked = currentStateInfo.tagHash == hashBlockInput && !isAnimatorTransitioning;
             inputBlocked |= nextStateInfo.tagHash == hashBlockInput; // curr state blocked, or one we're transitioning into is blocked
+            inputBlocked |= currentStateInfo.IsName("Take Damage"); // if taking damage, block ability to move or attack
         }// UpdateInputBlocking
     }
 }
