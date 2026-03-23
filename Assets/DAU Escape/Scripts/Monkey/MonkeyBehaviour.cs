@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
+using System.IO;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Analytics;
+using UnityEngine.Rendering.PostProcessing;
 
 namespace DAUEscape
 {
@@ -11,7 +14,10 @@ namespace DAUEscape
         private float timeToStopPursuit = 2.0f; // if target out of detection range for this many seconds, stop pursuit
         private float waitUntilMove = 2.0f; // when pursuit stops, how many seconds should NavMesh agent wait before moving again
         private float attackDistance = 1.5f; // need to be closer than this distance to player in order to attack them
+        private const float COOLDOWN_TIME = 3; // the amount of time needed between attacks
+        private float toCooldownFinished = 0;
 
+        private Animator animator;
         private PlayerController currentTarget; // previously detected target that monkey is currently chasing/attacking
         private EnemyController enemyController;
         private float timeSinceLostTarget = 0;
@@ -23,10 +29,13 @@ namespace DAUEscape
         private readonly int hashAttack = Animator.StringToHash("Attack"); // trigger
         private readonly int hashHurt = Animator.StringToHash("Hurt"); // trigger
         private readonly int hashDead = Animator.StringToHash("Dead"); // trigger
+        private readonly int hashAttackBlocked = Animator.StringToHash("AttackBlocked"); // bool: attack cooldown time is in effect t/f
+        private readonly int hashChase = Animator.StringToHash("Chase"); // in pursuit and should be in running animation
 
         private void Awake()
         {
             enemyController = GetComponent<EnemyController>();
+            animator = GetComponent<Animator>();
 
             originalPosition = transform.position;
             originalRotation = transform.rotation;
@@ -46,6 +55,12 @@ namespace DAUEscape
         }// Update
 
 
+        public void StartCooldown()
+        {
+            toCooldownFinished = COOLDOWN_TIME;
+        }
+
+
         private void GoToOriginalSpot()
         {
             currentTarget = null;
@@ -63,6 +78,9 @@ namespace DAUEscape
                     break;
                 case MessageType.DAMAGED:
                     OnReceiveDamage();
+
+                    // in case monkey is hit from an angle where it can't detect the player
+                    animator.SetBool(hashInPursuit, true);
                     break;
                 default:
                     break;
@@ -130,13 +148,26 @@ namespace DAUEscape
             // determine whether to attack the target or chase them depending on how far the monkey is from the player
             Vector3 toTarget = currentTarget.transform.position - transform.position;
 
+            if (toCooldownFinished > 0)
+            {
+                toCooldownFinished = Math.Max(0, toCooldownFinished - Time.deltaTime);
+
+                if (toCooldownFinished == 0)
+                {
+                    animator.SetBool(hashAttackBlocked, false);
+                }
+            }
+
+
             if (toTarget.magnitude <= attackDistance) // in attacking distance so attack target
             {
-                AttackTarget(toTarget);
+                if (toCooldownFinished == 0) { AttackTarget(toTarget); }
+                animator.SetBool(hashChase, false); // in attacking distance so not running (should be attacking or waiting on cooldown)
             }
             else // not in attacking distance so keep chasing them
             {
                 FollowTarget();
+                animator.SetBool(hashChase, true); // in pursuit but not in attack distance so chase target (run)
             }
         }// AttackorFollowTarget
 

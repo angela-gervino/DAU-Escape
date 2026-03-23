@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/LiquidFire Package 4 - BSH games/Devtoid - Gold Coins/Scene/Devtoid-Gold,Silver,CopperCoins.unity
+- path: Assets/DAU Escape/Scenes/WorldScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

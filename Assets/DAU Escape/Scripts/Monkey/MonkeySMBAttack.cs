@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DAUEscape;
 using UnityEngine;
 
 public class MonkeySMBAttack : StateMachineBehaviour
@@ -21,6 +22,10 @@ public class MonkeySMBAttack : StateMachineBehaviour
     {
         // reset trigger after animation finishes (when we're moving into a different state)
         animator.ResetTrigger("Attack");
+        animator.SetBool("AttackBlocked", true);
+
+        animator.GetComponent<MonkeyBehaviour>().StartCooldown();
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
