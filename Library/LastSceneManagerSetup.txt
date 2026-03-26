@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/DAU Escape/Scenes/WorldScene.unity
+- path: Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_Low.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
