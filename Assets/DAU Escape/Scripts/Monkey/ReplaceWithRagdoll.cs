@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace DAUEscape
@@ -31,8 +32,13 @@ namespace DAUEscape
 
                 if (currentTransform.childCount > 0)
                 {
-                    currentTransform = currentTransform.GetChild(0);
-                    ragdollTransform = ragdollTransform.GetChild(0);
+                    try
+                    {
+                        currentTransform = currentTransform.GetChild(0);
+                        ragdollTransform = ragdollTransform.GetChild(0);
+                    }
+                    catch (Exception) { break; } // exception occurs due to the Canvas child object
+
                 }
                 else
                 {

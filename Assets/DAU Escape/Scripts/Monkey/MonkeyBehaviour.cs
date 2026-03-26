@@ -14,7 +14,7 @@ namespace DAUEscape
         private float timeToStopPursuit = 2.0f; // if target out of detection range for this many seconds, stop pursuit
         private float waitUntilMove = 2.0f; // when pursuit stops, how many seconds should NavMesh agent wait before moving again
         private float attackDistance = 1.5f; // need to be closer than this distance to player in order to attack them
-        private const float COOLDOWN_TIME = 3; // the amount of time needed between attacks
+        private const float COOLDOWN_TIME = 2; // the amount of time needed between attacks
         private float toCooldownFinished = 0;
 
         private Animator animator;
@@ -80,7 +80,8 @@ namespace DAUEscape
                     OnReceiveDamage();
 
                     // in case monkey is hit from an angle where it can't detect the player
-                    animator.SetBool(hashInPursuit, true);
+                    currentTarget = PlayerController.Instance; // assuming only the player can deal damage to the monkey
+                    FollowTarget();
                     break;
                 default:
                     break;
@@ -97,6 +98,10 @@ namespace DAUEscape
 
         private void OnDead()
         {
+            // Get rid of the health bar
+            Canvas canvas = GetComponent<Canvas>();
+            if (canvas != null) { Destroy(canvas); Debug.Log("Here!"); }
+
             enemyController.Animator.SetTrigger(hashDead);
         }// OnDead
 

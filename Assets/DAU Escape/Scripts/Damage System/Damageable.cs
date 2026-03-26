@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DAUEscape
 {
@@ -10,6 +12,7 @@ namespace DAUEscape
         public int maxHP;
         public int currentHP { get; private set; }
         public List<MonoBehaviour> onDamageMessageReceivers;
+        public Slider healthBar;
 
         private bool isInvulnerable;
         private float timeSinceLastDamaged = 0.0f;
@@ -22,6 +25,8 @@ namespace DAUEscape
 
         private void Update()
         {
+            UpdateHealthBar(); // Update UI
+
             if (isInvulnerable)
             {
                 timeSinceLastDamaged += Time.deltaTime;
@@ -35,12 +40,23 @@ namespace DAUEscape
         }// Update
 
 
+        private void UpdateHealthBar()
+        {
+            if (healthBar != null)
+            {
+                float hpRatio = (float)currentHP / (float)maxHP;
+                healthBar.value = hpRatio;
+            }
+
+        }// UpdateHealthBar
+
+
         public void ApplyDamage(DamageMessage data)
         {
             if (currentHP > 0 && !isInvulnerable)
             {
                 isInvulnerable = true;
-                currentHP -= data.amount;
+                currentHP = Math.Max(currentHP - data.amount, 0); // HP shouldn't drop below 0
 
                 var messageType = currentHP <= 0 ? MessageType.DEAD : MessageType.DAMAGED;
 
