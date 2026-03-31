@@ -39,6 +39,7 @@
      <Compile Include="Assets\DAU Escape\Scripts\Player\PlayerRespawnSMB.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Helpers\IMessageReceiver.cs" />
      <Compile Include="Assets\AQUAS-Lite\Scripts\AQUAS_Lite_Reflection.cs" />
+     <Compile Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_CustomWind.cs" />
      <Compile Include="Assets\Old Sea Port\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
      <Compile Include="Assets\Old Sea Port\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Helpers\PlayerScanner.cs" />
@@ -58,14 +59,13 @@
      <Compile Include="Assets\Monkey\Scripts\Monkey.cs" />
      <Compile Include="Assets\Monkey\Scripts\MonkeyCamera.cs" />
      <Compile Include="Assets\Rocks_and_Boulders_2\Shaders\RotateGameObject.cs" />
+     <Compile Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_Utils.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Events\IAttackAnimListener.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Camera\FollowCamera.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Monkey\MonkeyBehaviour.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Weapons\MeleeWeapon.cs" />
      <Compile Include="Assets\DAU Escape\Scripts\Monkey\EnemyController.cs" />
      <Compile Include="Assets\Old Sea Port\EffectExamples\Shared\Scripts\GunAim.cs" />
-     <Compile Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_CustomWind.cs" />
-     <Compile Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_Utils.cs" />
      <None Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />
      <None Include="Assets\Crest\Crest\Shaders\Resources\DynWavesSphereWaterInteraction.shader" />
      <None Include="Assets\Crest\Crest\Shaders\OceanLightingHelpers.hlsl" />
@@ -143,6 +143,7 @@
      <None Include="Assets\Monkey\Monkey_readme.txt" />
      <None Include="Assets\Crest\Crest\Shaders\Resources\ShapeCombine.compute" />
      <None Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Leaves_301.shader" />
+     <None Include="Assets\RustyBlackShovel\readme_first.txt" />
      <None Include="Assets\Crest\Crest\Shaders\OceanInputs\Resources\ClipSurfaceRemoveAreaTexture.shader" />
      <None Include="Assets\Crest\Crest\Shaders\Underwater\UnderwaterEffectShared.hlsl" />
      <None Include="Assets\Crest\Crest\Shaders\Resources\QueryDisplacements.compute" />
