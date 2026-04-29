@@ -4,6 +4,7 @@ In this island escape game, you play as a pirate who has just found the burried 
 ### Player features:
 - Walk and rotate using ASDW or arrow keys.
 - Attack using the left mouse button.
+- Interact with NPCs by pressing "X".
 - The player will respawn in their original position with max HP after being defeated.
 
 ### Monkey features:
