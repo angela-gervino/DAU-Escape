@@ -37,6 +37,7 @@ namespace DAUEscape
         private bool isAnimatorTransitioning;
         private bool inputBlocked;
         private bool isRespawning;
+        private static bool dialogueInProgress;
 
         private Vector3 originalPosition;
         private Quaternion originalRotation;
@@ -48,6 +49,11 @@ namespace DAUEscape
 
         // Animator Tag Hashes
         private readonly int hashBlockInput = Animator.StringToHash("BlockInput");
+
+        public static void UpdateDialogueStatus(bool value)
+        {
+            dialogueInProgress = value;
+        }
 
         private void Awake()
         {
@@ -216,6 +222,7 @@ namespace DAUEscape
             inputBlocked |= nextStateInfo.tagHash == hashBlockInput; // curr state blocked, or one we're transitioning into is blocked
             inputBlocked |= currentStateInfo.IsName("Take Damage"); // if taking damage, block ability to move or attack
             inputBlocked |= currentStateInfo.IsName("Attack");
+            inputBlocked |= dialogueInProgress;
         }// UpdateInputBlocking
     }
 }
