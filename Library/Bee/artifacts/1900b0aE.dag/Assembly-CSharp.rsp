@@ -441,7 +441,6 @@
 "Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/CTI_CustomWind.cs"
 "Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/CTI_Utils.cs"
 "Assets/DAU Escape/Scripts/Camera/FollowCamera.cs"
-"Assets/DAU Escape/Scripts/ConversationStarter.cs"
 "Assets/DAU Escape/Scripts/Damage System/Damageable.DamageMessage.cs"
 "Assets/DAU Escape/Scripts/Damage System/Damageable.cs"
 "Assets/DAU Escape/Scripts/Events/IAttackAnimListener.cs"
