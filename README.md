@@ -24,3 +24,7 @@ https://youtu.be/dY9LY3-cAKg
 
 # Setup Instructions
 The game can be run by loading the project into Unity.
+
+NOTE: Some files were too large to track. These assets can be found at the links below and manually added to the project.
+- https://assetstore.unity.com/packages/3d/props/exterior/rock-and-boulders-2-6947
+- https://assetstore.unity.com/packages/2d/textures-materials/floors/realistic-terrain-textures-free-279940#content
